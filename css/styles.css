@@ -1,0 +1,34 @@
+/**
+*
+* Global Styles
+*
+*/
+
+#sign-in {
+  position:absolute;
+  right:40px;
+  top:55px;
+  background:#fff;
+  padding:20px;
+  z-index:10;
+  min-width:400px;
+  display:none;
+}
+
+.active {
+  display:block !important;
+}
+
+.logo {
+  width:40px;
+}
+
+/**
+*
+* Landing Page Styles
+*
+*/
+header.masthead {
+  background: url("../img/grinch.jpg") no-repeat center center;
+  background-size:cover;
+}

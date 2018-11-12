@@ -232,6 +232,29 @@
       </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDKChk9CActHlMIajRjHl9LAgjL3DHxHgc",
+      authDomain: "cis-371-project.firebaseapp.com",
+      databaseURL: "https://cis-371-project.firebaseio.com",
+      projectId: "cis-371-project",
+      storageBucket: "cis-371-project.appspot.com",
+      messagingSenderId: "580346306494"
+    };
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+    var movies_ref = database.ref('movies');
+
+    movies_ref.on("child_added", function(snapshot, prevChildKey) {
+      var movie = snapshot.val();
+      console.log("Title: " + movie.title);
+
+    });
+  </script>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

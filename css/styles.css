@@ -32,3 +32,11 @@ header.masthead {
   background: url("../img/grinch.jpg") no-repeat center center;
   background-size:cover;
 }
+
+#features h2 {
+  margin-bottom:40px;
+}
+
+.features-icons-item img {
+  height:330px;
+}

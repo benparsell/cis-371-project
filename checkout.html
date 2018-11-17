@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
         <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
         <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
       </div>
@@ -63,21 +63,23 @@
     <section id="gallery-intro" class="jumbotron">
       <div class="container">
         <div class="row">
-            <h1>Current Showings</h1>
+            <h1 id="movie_head"></h1>
         </div>
       </div>
     </section>
 
     <section id="">
       <div class="container">
-        <div class="row search-movies">
-          <div class="form-group">
-              <input class="form-control" id="searchInput" placeholder="Find a Movie" onkeyup="searchMovies()"/>
-          </div>
-          <hr />
-        </div>
-        <div id="movie-gallery">
+        <div class="row">
+          <div class="col-md-4" id="movie-details-1">
 
+          </div>
+          <div class="col-md-4" id="movie-details-2">
+
+          </div>
+          <div class="col-md-4" id="movie-details-3">
+            <p>Book your tickets for:</p>
+          </div>
         </div>
       </div>
     </section>
@@ -201,77 +203,26 @@
 
     movies_ref.on("child_added", function(snapshot, prevChildKey) {
       var movie = snapshot.val();
-      console.log("Title: " + movie.title);
+      if(movie.movie_id == sessionStorage.getItem('movie_id')) {
+        console.log(movie.title);
+        var movie_header = document.getElementById("movie_head");
+        movie_header.innerHTML = "Tickets and Details on " + movie.title;
 
-      var cont = document.getElementById("movie-gallery");
+        var movie_col_3 = document.getElementById("movie-details-3");
 
-      var row = document.createElement("div");
-      row.setAttribute('class', 'row movie-row');
+        var movie_title_head = document.createElement("h2");
+        movie_title_head.setAttribute("class", "movie-heading");
+        movie_title_head.innerHTML = movie.title;
 
-      var col4_1 = document.createElement("div");
-      col4_1.setAttribute('class', 'col-md-4');
-
-      var col4_2 = document.createElement("div");
-      col4_2.setAttribute('class', 'col-md-4');
-
-      var head = document.createElement("h2");
-      head.innerHTML = movie.title;
-      head.setAttribute('class', 'movie-heading');
-
-      var desc = document.createElement("p");
-      desc.innerHTML = movie.tagline;
-
-      var button = document.createElement("a");
-      button.innerHTML = "Get Tickets";
-      button.setAttribute("class", "btn btn-primary");
-      button.setAttribute("href", "javascript:void(0);");
-      button.setAttribute("data-movie-id", movie.movie_id);
-      button.addEventListener("click", checkout);
-
-      var img = document.createElement("img");
-      img.setAttribute('src', movie.img_link);
-      img.setAttribute('class', 'img-fluid');
-
-      col4_1.appendChild(img);
-      row.appendChild(col4_1);
-
-      col4_2.appendChild(head);
-      col4_2.appendChild(desc);
-      col4_2.appendChild(button);
-      row.appendChild(col4_2);
-
-
-      cont.appendChild(row);
-
+        movie_col_3.appendChild(movie_title_head);
+      } else if (sessionStorage.getItem("movie_id") == null) {
+        var movie_header = document.getElementById("movie_head");
+        movie_header.innerHTML = "You haven't selected a movie!";
+      }
 
     });
 
-    function searchMovies() {
-      var input, filter, movies, title, i;
-      input = document.getElementById("searchInput");
-      filter = input.value.toUpperCase();
-      movies = document.getElementsByClassName("movie-row");
-
-      // Loop through all table rows, and hide those who don't match the search query
-      for (i = 0; i < movies.length; i++) {
-        title = movies[i].getElementsByTagName("h2")[0];
-        if (title) {
-          if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            movies[i].style.display = "";
-          } else {
-            movies[i].style.display = "none";
-          }
-        }
-      }
-    }
-
-    function checkout(ev) {
-      var movie_id, button;
-      button = ev.target;
-      movie_id = button.getAttribute("data-movie-id");
-      sessionStorage.setItem('movie_id', movie_id);
-      window.location = "/checkout.html";
-    }
+    console.log(sessionStorage.getItem("movie_id"));
   </script>
 
     <!-- Bootstrap core JavaScript -->

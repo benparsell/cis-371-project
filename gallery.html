@@ -60,135 +60,24 @@
       </div>
     </nav>
 
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
+    <section id="gallery-intro" class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-offset-xs-3 col-xl-6 mx-auto">
-            <h1 class="mb-5">The Grinch 2018 — Now in Theaters!</h1>
-            <a class="btn btn-primary" href="javascript:void(0)">Get Tickets</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Icons Grid -->
-    <section id="features" class="features-icons bg-light text-center">
-      <div class="container">
-        <h2>Featured Movies</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <img src="img/avatar.jpg" class="img-fluid" alt="Avatar Movie Poster" />
-              <h3>Avatar</h3>
-              <p class="lead mb-0">Enter the World of Pandora.</p>
-              <p><em>162 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <img src="img/pirates.jpg" class="img-fluid" alt="Pirates of the Caribbean Movie Poster" />
-              <h3>Pirates of the Caribbean: At World's End</h3>
-              <p class="lead mb-0">At the end of the world, the adventure begins.</p>
-              <p><em>169 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <img src="img/spectre.jpg" class="img-fluid" alt="Spectre Movie Poster" />
-              <h3>Spectre</h3>
-              <p class="lead mb-0">A Plan No One Escapes</p>
-              <p><em>148 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <img src="img/TDKR.jpg" class="img-fluid" alt="The Dark Knight Rises Movie Poster" />
-              <h3>The Dark Knight Rises</h3>
-              <p class="lead mb-0">The Legend Ends</p>
-              <p><em>165 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
+            <h1>Current Showings</h1>
         </div>
       </div>
     </section>
 
-    <!-- Image Showcases -->
-    <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/popcorn.jpeg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Our popcorn only has a 10,000% markup!</h2>
-            <p class="lead mb-0">On average, every other surrounding theater has a <em>10,500%</em> markup. Spend all of your money with us. It'll taste better.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/Movie-theater.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Ugly, Red Movie Theater Leather Seats</h2>
-            <p class="lead mb-0">Have you seriously ever tried cleaning these? It's impossible. But, comfort for our guests is our main priority — so spill all of your ish all over your seat.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
+    <section id="">
       <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-            </div>
+        <div class="row search-movies">
+          <div class="form-group">
+              <input class="form-control" id="searchInput" placeholder="Find a Movie" onkeyup="searchMovies()"/>
           </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-              <h5>Sarah	W.</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-            </div>
-          </div>
+          <hr />
         </div>
-      </div>
-    </section>
+        <div id="movie-gallery">
 
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </section>
@@ -254,6 +143,7 @@
     };
     firebase.initializeApp(config);
 
+
     function signOut() {
       firebase.auth().signOut();
     }
@@ -313,7 +203,65 @@
       var movie = snapshot.val();
       console.log("Title: " + movie.title);
 
+      var cont = document.getElementById("movie-gallery");
+
+      var row = document.createElement("div");
+      row.setAttribute('class', 'row movie-row');
+
+      var col4_1 = document.createElement("div");
+      col4_1.setAttribute('class', 'col-md-4');
+
+      var col4_2 = document.createElement("div");
+      col4_2.setAttribute('class', 'col-md-4');
+
+      var head = document.createElement("h2");
+      head.innerHTML = movie.title;
+      head.setAttribute('class', 'movie-heading');
+
+      var desc = document.createElement("p");
+      desc.innerHTML = movie.tagline;
+
+      var button = document.createElement("a");
+      button.innerHTML = "Get Tickets";
+      button.setAttribute("class", "btn btn-primary");
+      button.setAttribute("href", "javascript:void(0);");
+
+      var img = document.createElement("img");
+      img.setAttribute('src', movie.img_link);
+      img.setAttribute('class', 'img-fluid');
+
+      col4_1.appendChild(img);
+      row.appendChild(col4_1);
+
+      col4_2.appendChild(head);
+      col4_2.appendChild(desc);
+      col4_2.appendChild(button);
+      row.appendChild(col4_2);
+
+
+      cont.appendChild(row);
+
+
     });
+
+    function searchMovies() {
+      var input, filter, movies, title, i;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      movies = document.getElementsByClassName("movie-row");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < movies.length; i++) {
+        title = movies[i].getElementsByTagName("h2")[0];
+        if (title) {
+          if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            movies[i].style.display = "";
+          } else {
+            movies[i].style.display = "none";
+          }
+        }
+      }
+    }
   </script>
 
     <!-- Bootstrap core JavaScript -->
@@ -323,4 +271,4 @@
 
   </body>
 
-</html>
+  </html>

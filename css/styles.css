@@ -23,6 +23,11 @@
   width:40px;
 }
 
+.movie-heading {
+  font-weight:200;
+  font-family:'Lato', sans-serif;
+}
+
 /**
 *
 * Landing Page Styles
@@ -39,4 +44,13 @@ header.masthead {
 
 .features-icons-item img {
   height:330px;
+}
+
+/*
+*
+* Gallery Styles
+*
+*/
+.movie-row {
+  margin-bottom:50px;
 }

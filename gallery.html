@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Downtown Theater">
+
+    <title>Downtown Theater — Your local Movie Theater</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
+        <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
+      </div>
+      <div id="sign-in">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control" placeholder="joe@email.com" type="email" id="email" />
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input class="form-control" placeholder="****" type="password" id="password" />
+                </div>
+                <div class="form-group">
+                  <a href="javascript:void(0)" class="btn btn-primary" id="log-in" onclick="toggleSignIn()">Log in</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="gallery-intro" class="jumbotron">
+      <div class="container">
+        <div class="row">
+            <h1>Current Showings</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="">
+      <div class="container">
+        <div class="row">
+          <div class="form-group">
+              <label>Find a Movie</label>
+              <input class="form-control" id="searchInput" placeholder="Find a Movie" onkeyup="searchMovies()"/>
+          </div>
+          <hr />
+        </div>
+        <div id="movie-gallery">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Downtown Theater 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDKChk9CActHlMIajRjHl9LAgjL3DHxHgc",
+      authDomain: "cis-371-project.firebaseapp.com",
+      databaseURL: "https://cis-371-project.firebaseio.com",
+      projectId: "cis-371-project",
+      storageBucket: "cis-371-project.appspot.com",
+      messagingSenderId: "580346306494"
+    };
+    firebase.initializeApp(config);
+
+
+    function signOut() {
+      firebase.auth().signOut();
+    }
+
+    /**
+     * Handles the sign in button press.
+     */
+    function toggleSignIn() {
+      if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      } else {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Sign in with email and pass.
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          document.getElementById('log-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authwithemail]
+      }
+      document.getElementById('log-in').disabled = true;
+    }
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("CORRECT");
+      } else {
+        console.log("INCORRECT");
+      }
+    });
+
+    var database = firebase.database();
+    var movies_ref = database.ref('movies');
+
+    movies_ref.on("child_added", function(snapshot, prevChildKey) {
+      var movie = snapshot.val();
+      console.log("Title: " + movie.title);
+
+      var cont = document.getElementById("movie-gallery");
+
+      var row = document.createElement("div");
+      row.setAttribute('class', 'row movie-row');
+
+      var col4_1 = document.createElement("div");
+      col4_1.setAttribute('class', 'col-md-4');
+
+      var col4_2 = document.createElement("div");
+      col4_2.setAttribute('class', 'col-md-4');
+
+      var head = document.createElement("h2");
+      head.innerHTML = movie.title;
+      head.setAttribute('class', 'movie-heading');
+
+      var desc = document.createElement("p");
+      desc.innerHTML = movie.tagline;
+
+      var button = document.createElement("a");
+      button.innerHTML = "Get Tickets";
+      button.setAttribute("class", "btn btn-primary");
+      button.setAttribute("href", "javascript:void(0);");
+
+      var img = document.createElement("img");
+      img.setAttribute('src', movie.img_link);
+      img.setAttribute('class', 'img-fluid');
+
+      col4_1.appendChild(img);
+      row.appendChild(col4_1);
+
+      col4_2.appendChild(head);
+      col4_2.appendChild(desc);
+      col4_2.appendChild(button);
+      row.appendChild(col4_2);
+
+
+      cont.appendChild(row);
+
+
+    });
+
+    function searchMovies() {
+      var input, filter, movies, title, i;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      movies = document.getElementsByClassName("movie-row");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < movies.length; i++) {
+        title = movies[i].getElementsByTagName("h2")[0];
+        if (title) {
+          if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            movies[i].style.display = "";
+          } else {
+            movies[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/ui.js"></script>
+
+  </body>
+
+  </html>

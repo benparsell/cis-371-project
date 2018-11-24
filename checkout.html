@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
         <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
         <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
       </div>
@@ -60,99 +60,25 @@
       </div>
     </nav>
 
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
+    <section id="gallery-intro" class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-offset-xs-3 col-xl-6 mx-auto">
-            <h1 class="mb-5">The Grinch 2018 — Now in Theaters!</h1>
-            <a class="btn btn-primary" href="javascript:void(0)">Get Tickets</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Icons Grid -->
-    <section id="features" class="features-icons bg-light text-center">
-      <div class="container">
-        <h2>Featured Movies</h2>
-        <div class="row" id="featured-row">
-
+            <h1 id="movie_head"></h1>
         </div>
       </div>
     </section>
 
-    <!-- Image Showcases -->
-    <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/popcorn.jpeg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Our popcorn only has a 10,000% markup!</h2>
-            <p class="lead mb-0">On average, every other surrounding theater has a <em>10,500%</em> markup. Spend all of your money with us. It'll taste better.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/Movie-theater.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Ugly, Red Movie Theater Leather Seats</h2>
-            <p class="lead mb-0">Have you seriously ever tried cleaning these? It's impossible. But, comfort for our guests is our main priority — so spill all of your ish all over your seat.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
-      <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-              <h5>Sarah	W.</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-      <div class="overlay"></div>
+    <section id="">
       <div class="container">
         <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+          <div class="col-md-4" id="movie-details-1">
+
           </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
-              <div class="form-row">
-                <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                </div>
-                <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                </div>
-              </div>
-            </form>
+          <div class="col-md-4" id="movie-details-2">
+
+          </div>
+          <div class="col-md-4" id="movie-details-3">
+            <p>Book your tickets for:</p>
           </div>
         </div>
       </div>
@@ -219,6 +145,7 @@
     };
     firebase.initializeApp(config);
 
+
     function signOut() {
       firebase.auth().signOut();
     }
@@ -274,80 +201,28 @@
     var database = firebase.database();
     var movies_ref = database.ref('movies');
 
-    var min=0;
-    var max=51;
-    var rand1 = Math.floor(Math.random() * (+max - +min)) + +min;
-    var rand2 = Math.floor(Math.random() * (+max - +min)) + +min;
-    var rand3 = Math.floor(Math.random() * (+max - +min)) + +min;
-    var rand4 = Math.floor(Math.random() * (+max - +min)) + +min;
-    console.log(rand1);
-    console.log(rand2);
-    console.log(rand3);
-    console.log(rand4);
-
-
     movies_ref.on("child_added", function(snapshot, prevChildKey) {
-      // Grab movie object
       var movie = snapshot.val();
+      if(movie.movie_id == sessionStorage.getItem('movie_id')) {
+        console.log(movie.title);
+        var movie_header = document.getElementById("movie_head");
+        movie_header.innerHTML = "Tickets and Details on " + movie.title;
 
-      // Let's compare the movie's key value (e.g. 0-50 in firebase) to our random numbers
-      if(snapshot.key == rand1 || snapshot.key == rand2 || snapshot.key == rand3 || snapshot.key == rand4) {
-        // If matching, add these four movies to the featured section
-        console.log("Title: " + movie.title);
+        var movie_col_3 = document.getElementById("movie-details-3");
 
-        var row = document.getElementById('featured-row');
+        var movie_title_head = document.createElement("h2");
+        movie_title_head.setAttribute("class", "movie-heading");
+        movie_title_head.innerHTML = movie.title;
 
-        var col = document.createElement('div');
-        col.setAttribute('class', 'col-md-3');
-
-        var movie_cont = document.createElement('div');
-        movie_cont.setAttribute('class', 'features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3');
-
-        var img = document.createElement('img');
-        img.setAttribute('src', movie.img_link);
-        img.setAttribute('class', 'img-fluid');
-        img.setAttribute('alt', movie.title + ' Movie Poster');
-
-        var h3 = document.createElement('h3');
-        h3.innerHTML = movie.title;
-
-        var p1 = document.createElement('p');
-        p1.setAttribute('class', 'lead mb-0');
-        p1.innerHTML = movie.tagline;
-
-        var p2 = document.createElement('p');
-
-        var em = document.createElement('em');
-        em.innerHTML = movie.runtime + ' minutes';
-
-        var button = document.createElement('a');
-        button.setAttribute('href', 'javascript:void(0)');
-        button.setAttribute('class', 'btn btn-primary');
-        button.innerHTML = 'Get Tickets';
-        button.setAttribute("data-movie-id", movie.movie_id);
-        button.addEventListener("click", checkout);
-
-        p2.appendChild(em);
-
-        movie_cont.appendChild(img);
-        movie_cont.appendChild(h3);
-        movie_cont.appendChild(p1);
-        movie_cont.appendChild(p2);
-        movie_cont.appendChild(button);
-
-        col.appendChild(movie_cont);
-        row.appendChild(col);
+        movie_col_3.appendChild(movie_title_head);
+      } else if (sessionStorage.getItem("movie_id") == null) {
+        var movie_header = document.getElementById("movie_head");
+        movie_header.innerHTML = "You haven't selected a movie!";
       }
+
     });
 
-    function checkout(ev) {
-      var movie_id, button;
-      button = ev.target;
-      movie_id = button.getAttribute("data-movie-id");
-      sessionStorage.setItem('movie_id', movie_id);
-      window.location = "checkout.html";
-    }
-      
+    console.log(sessionStorage.getItem("movie_id"));
   </script>
 
     <!-- Bootstrap core JavaScript -->
@@ -357,4 +232,4 @@
 
   </body>
 
-</html>
+  </html>

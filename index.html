@@ -73,6 +73,7 @@
     <section id="features" class="features-icons bg-light text-center">
       <div class="container">
         <h2>Featured Movies</h2>
+<<<<<<< Updated upstream
         <div class="row">
           <div class="col-md-3">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
@@ -106,6 +107,10 @@
               <p><em>165 minutes</em></p>
             </div>
           </div>
+=======
+        <div class="row" id="featured-row">
+
+>>>>>>> Stashed changes
         </div>
       </div>
     </section>
@@ -232,6 +237,153 @@
       </div>
     </footer>
 
+<<<<<<< Updated upstream
+=======
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDKChk9CActHlMIajRjHl9LAgjL3DHxHgc",
+      authDomain: "cis-371-project.firebaseapp.com",
+      databaseURL: "https://cis-371-project.firebaseio.com",
+      projectId: "cis-371-project",
+      storageBucket: "cis-371-project.appspot.com",
+      messagingSenderId: "580346306494"
+    };
+    firebase.initializeApp(config);
+
+    function signOut() {
+      firebase.auth().signOut();
+    }
+
+    /**
+     * Handles the sign in button press.
+     */
+    function toggleSignIn() {
+      if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      } else {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Sign in with email and pass.
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          document.getElementById('log-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authwithemail]
+      }
+      document.getElementById('log-in').disabled = true;
+    }
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("CORRECT");
+      } else {
+        console.log("INCORRECT");
+      }
+    });
+
+    var database = firebase.database();
+    var movies_ref = database.ref('movies');
+
+    var min=0;
+    var max=51;
+    var rand1 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand2 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand3 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand4 = Math.floor(Math.random() * (+max - +min)) + +min;
+    console.log(rand1);
+    console.log(rand2);
+    console.log(rand3);
+    console.log(rand4);
+
+
+    movies_ref.on("child_added", function(snapshot, prevChildKey) {
+      // Grab movie object
+      var movie = snapshot.val();
+
+      // Let's compare the movie's key value (e.g. 0-50 in firebase) to our random numbers
+      if(snapshot.key == rand1 || snapshot.key == rand2 || snapshot.key == rand3 || snapshot.key == rand4) {
+        // If matching, add these four movies to the featured section
+        console.log("Title: " + movie.title);
+
+        var row = document.getElementById('featured-row');
+
+        var col = document.createElement('div');
+        col.setAttribute('class', 'col-md-3');
+
+        var movie_cont = document.createElement('div');
+        movie_cont.setAttribute('class', 'features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3');
+
+        var img = document.createElement('img');
+        img.setAttribute('src', movie.img_link);
+        img.setAttribute('class', 'img-fluid');
+        img.setAttribute('alt', movie.title + ' Movie Poster');
+
+        var h3 = document.createElement('h3');
+        h3.innerHTML = movie.title;
+
+        var p1 = document.createElement('p');
+        p1.setAttribute('class', 'lead mb-0');
+        p1.innerHTML = movie.tagline;
+
+        var p2 = document.createElement('p');
+
+        var em = document.createElement('em');
+        em.innerHTML = movie.runtime + ' minutes';
+
+        var button = document.createElement('a');
+        button.setAttribute('href', 'javascript:void(0)');
+        button.setAttribute('class', 'btn btn-primary');
+        button.innerHTML = 'Get Tickets';
+        button.setAttribute("data-movie-id", movie.movie_id);
+        button.addEventListener("click", checkout);
+
+        p2.appendChild(em);
+
+        movie_cont.appendChild(img);
+        movie_cont.appendChild(h3);
+        movie_cont.appendChild(p1);
+        movie_cont.appendChild(p2);
+        movie_cont.appendChild(button);
+
+        col.appendChild(movie_cont);
+        row.appendChild(col);
+      }
+    });
+
+    function checkout(ev) {
+      var movie_id, button;
+      button = ev.target;
+      movie_id = button.getAttribute("data-movie-id");
+      sessionStorage.setItem('movie_id', movie_id);
+      window.location = "checkout.html";
+    }
+  </script>
+
+>>>>>>> Stashed changes
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

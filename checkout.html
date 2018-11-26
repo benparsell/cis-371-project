@@ -79,6 +79,11 @@
           </div>
           <div class="col-md-4" id="movie-details-3">
             <p>Book your tickets for:</p>
+            <div class="showtimes">
+              <ul id="showtimes_list">
+
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -200,6 +205,7 @@
 
     var database = firebase.database();
     var movies_ref = database.ref('movies');
+    var showtimes_ref = database.ref('showtimes');
 
     movies_ref.on("child_added", function(snapshot, prevChildKey) {
       var movie = snapshot.val();
@@ -208,6 +214,13 @@
         var movie_header = document.getElementById("movie_head");
         movie_header.innerHTML = "Tickets and Details on " + movie.title;
 
+        var movie_col_1 = document.getElementById("movie-details-1");
+        var img = document.createElement("img");
+        img.setAttribute('src', movie.img_link);
+        img.setAttribute('class', 'img-fluid');
+
+        movie_col_1.appendChild(img);
+
         var movie_col_3 = document.getElementById("movie-details-3");
 
         var movie_title_head = document.createElement("h2");
@@ -215,11 +228,29 @@
         movie_title_head.innerHTML = movie.title;
 
         movie_col_3.appendChild(movie_title_head);
+
+
       } else if (sessionStorage.getItem("movie_id") == null) {
         var movie_header = document.getElementById("movie_head");
         movie_header.innerHTML = "You haven't selected a movie!";
       }
 
+    });
+
+    showtimes_ref.on("child_added", function(snapshot, prevChildKey) {
+      var showtime = snapshot.val();
+      if(sessionStorage.getItem('movie_id')) {
+        var movie_id = sessionStorage.getItem('movie_id');
+        if(movie_id == showtime.movieID) {
+          var showtimes_list = document.getElementById("showtimes_list");
+          var showtimes_list_item = document.createElement('li');
+          var showtimes_
+          showtimes_list_item.innerHTML = showtime.showID;
+
+          showtimes_list.appendChild(showtimes_list_item);
+          console.log(showtime.showID);
+        }
+      }
     });
 
     console.log(sessionStorage.getItem("movie_id"));

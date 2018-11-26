@@ -22,17 +22,33 @@
     <link href="css/landing-page.min.css" rel="stylesheet">
 
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
+    <!-- <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
-        <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
-        <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link">Right Link 1</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">            Dropdown on Right</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action with a lot of text inside of an item</a>
+            </div>
+          </li>
+        </ul>
+
       </div>
       <div id="sign-in">
         <div class="container">
@@ -56,6 +72,33 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Movies</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account <i class="fa fa-user-circle"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="account-dropdown">
+
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -266,8 +309,35 @@
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("CORRECT");
+        var nav_cont = document.getElementById("account-dropdown");
+        while (nav_cont.firstChild) {
+            nav_cont.removeChild(nav_cont.firstChild);
+        }
+
+        var li_item_1 = document.createElement("li");
+        var a_item_1 = document.createElement("a");
+        a_item_1.innerHTML = "Account Details";
+        a_item_1.setAttribute("class", "dropdown-item");
+        a_item_1.setAttribute("href", "#");
+
+        li_item_1.appendChild(a_item_1);
+        nav_cont.appendChild(li_item_1);
+
       } else {
         console.log("INCORRECT");
+        var nav_cont = document.getElementById("account-dropdown");
+        while (nav_cont.firstChild) {
+            nav_cont.removeChild(nav_cont.firstChild);
+        }
+
+        var li_item_1 = document.createElement("li");
+        var a_item_1 = document.createElement("a");
+        a_item_1.innerHTML = "Sign In or Register";
+        a_item_1.setAttribute("class", "dropdown-item");
+        a_item_1.setAttribute("href", "#");
+
+        li_item_1.appendChild(a_item_1);
+        nav_cont.appendChild(li_item_1);
       }
     });
 

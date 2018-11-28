@@ -1,0 +1,11 @@
+[
+    {"custID": "0005000", "firstName":"Markus", "lastName":"McMann", "address":"730 South River Bend, Springfield MA", "email":"markus.mcmann@gmail.com", "password":"password1" },
+    {"custID": "0005001", "firstName":"Gary", "lastName":"Larn", "address":"3785 Davis Court, St. Louis IL", "email":"gary.larn@yahoo.com", "password":"YoullNeverGuess" },
+    {"custID": "0005002", "firstName":"Mary", "lastName":"Larn", "address":"3785 Davis Court, St. Louis IL", "email":"marylarn@yahoo.com", "password":"IGuessedIt" },
+    {"custID": "0005003", "firstName":"Sophie", "lastName":"Williams", "address":"1145 Bryan Avenue, St. Paul MN", "email":"williams.sophie@gmail.com", "password":"1Hrt8#4" },
+    {"custID": "0005004", "firstName":"Danny", "lastName":"Johnson", "address":"888 Callison Lane, New Castle DE", "email":"djohnson123@hotmail.com", "password":"notAGoodPassword" },
+    {"custID": "0005005", "firstName":"Merideth", "lastName":"Brown", "address":"1504 Roane Avenue, Hyattsville MD", "email":"mer.brown@yahoo.com", "password":"Br0wn1010" },
+    {"custID": "0005006", "firstName":"Bobby", "lastName":"Shmorda", "address":"2282 Holly Street, Augusta CA", "email":"shmordabob@gmail.com", "password":"P4$$w0Rd" },
+    {"custID": "0005007", "firstName":"Karen", "lastName":"Wyoming", "address":"685 Coleman Avenue, Riverside CA", "email":"thekaren432@gmail.com", "password":"thekaren432" },
+    {"custID": "0005008", "firstName":"Phill", "lastName":"Swift", "address":"3142 Ferrell Street, Duluth MN", "email":"flextapeman123@yahoo.com", "password":"withFlexSEAL" }
+]

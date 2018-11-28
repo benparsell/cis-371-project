@@ -226,7 +226,7 @@
       button.setAttribute("class", "btn btn-primary");
       button.setAttribute("href", "javascript:void(0);");
       button.setAttribute("data-movie-id", movie.movie_id);
-      button.addEventListener("click", checkout);
+      button.addEventListener("click", details);
 
       var img = document.createElement("img");
       img.setAttribute('src', movie.img_link);
@@ -265,12 +265,12 @@
       }
     }
 
-    function checkout(ev) {
+    function details(ev) {
       var movie_id, button;
       button = ev.target;
       movie_id = button.getAttribute("data-movie-id");
       sessionStorage.setItem('movie_id', movie_id);
-      window.location = "checkout.html";
+      window.location = "movie-details.html";
     }
   </script>
 

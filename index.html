@@ -325,7 +325,7 @@
         button.setAttribute('class', 'btn btn-primary');
         button.innerHTML = 'Get Tickets';
         button.setAttribute("data-movie-id", movie.movie_id);
-        button.addEventListener("click", checkout);
+        button.addEventListener("click", details);
 
         p2.appendChild(em);
 
@@ -340,12 +340,12 @@
       }
     });
 
-    function checkout(ev) {
+    function details(ev) {
       var movie_id, button;
       button = ev.target;
       movie_id = button.getAttribute("data-movie-id");
       sessionStorage.setItem('movie_id', movie_id);
-      window.location = "checkout.html";
+      window.location = "movie-details.html";
     }
 
   </script>

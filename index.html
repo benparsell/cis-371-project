@@ -77,43 +77,8 @@
     <section id="features" class="features-icons bg-light text-center">
       <div class="container">
         <h2>Featured Movies</h2>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <img src="img/avatar.jpg" class="img-fluid" alt="Avatar Movie Poster" />
-              <h3>Avatar</h3>
-              <p class="lead mb-0">Enter the World of Pandora.</p>
-              <p><em>162 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <img src="img/pirates.jpg" class="img-fluid" alt="Pirates of the Caribbean Movie Poster" />
-              <h3>Pirates of the Caribbean: At World's End</h3>
-              <p class="lead mb-0">At the end of the world, the adventure begins.</p>
-              <p><em>169 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <img src="img/spectre.jpg" class="img-fluid" alt="Spectre Movie Poster" />
-              <h3>Spectre</h3>
-              <p class="lead mb-0">A Plan No One Escapes</p>
-              <p><em>148 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <img src="img/TDKR.jpg" class="img-fluid" alt="The Dark Knight Rises Movie Poster" />
-              <h3>The Dark Knight Rises</h3>
-              <p class="lead mb-0">The Legend Ends</p>
-              <p><em>165 minutes</em></p>
-              <a href="#" class="btn btn-primary">Get Tickets</a>
-            </div>
-          </div>
+        <div class="row" id="featured-row">
+
         </div>
       </div>
     </section>
@@ -309,11 +274,80 @@
     var database = firebase.database();
     var movies_ref = database.ref('movies');
 
-    movies_ref.on("child_added", function(snapshot, prevChildKey) {
-      var movie = snapshot.val();
-      console.log("Title: " + movie.title);
+    var min=0;
+    var max=51;
+    var rand1 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand2 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand3 = Math.floor(Math.random() * (+max - +min)) + +min;
+    var rand4 = Math.floor(Math.random() * (+max - +min)) + +min;
+    console.log(rand1);
+    console.log(rand2);
+    console.log(rand3);
+    console.log(rand4);
 
+
+    movies_ref.on("child_added", function(snapshot, prevChildKey) {
+      // Grab movie object
+      var movie = snapshot.val();
+
+      // Let's compare the movie's key value (e.g. 0-50 in firebase) to our random numbers
+      if(snapshot.key == rand1 || snapshot.key == rand2 || snapshot.key == rand3 || snapshot.key == rand4) {
+        // If matching, add these four movies to the featured section
+        console.log("Title: " + movie.title);
+
+        var row = document.getElementById('featured-row');
+
+        var col = document.createElement('div');
+        col.setAttribute('class', 'col-md-3');
+
+        var movie_cont = document.createElement('div');
+        movie_cont.setAttribute('class', 'features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3');
+
+        var img = document.createElement('img');
+        img.setAttribute('src', movie.img_link);
+        img.setAttribute('class', 'img-fluid');
+        img.setAttribute('alt', movie.title + ' Movie Poster');
+
+        var h3 = document.createElement('h3');
+        h3.innerHTML = movie.title;
+
+        var p1 = document.createElement('p');
+        p1.setAttribute('class', 'lead mb-0');
+        p1.innerHTML = movie.tagline;
+
+        var p2 = document.createElement('p');
+
+        var em = document.createElement('em');
+        em.innerHTML = movie.runtime + ' minutes';
+
+        var button = document.createElement('a');
+        button.setAttribute('href', 'javascript:void(0)');
+        button.setAttribute('class', 'btn btn-primary');
+        button.innerHTML = 'Get Tickets';
+        button.setAttribute("data-movie-id", movie.movie_id);
+        button.addEventListener("click", checkout);
+
+        p2.appendChild(em);
+
+        movie_cont.appendChild(img);
+        movie_cont.appendChild(h3);
+        movie_cont.appendChild(p1);
+        movie_cont.appendChild(p2);
+        movie_cont.appendChild(button);
+
+        col.appendChild(movie_cont);
+        row.appendChild(col);
+      }
     });
+
+    function checkout(ev) {
+      var movie_id, button;
+      button = ev.target;
+      movie_id = button.getAttribute("data-movie-id");
+      sessionStorage.setItem('movie_id', movie_id);
+      window.location = "checkout.html";
+    }
+
   </script>
 
     <!-- Bootstrap core JavaScript -->

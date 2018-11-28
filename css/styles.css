@@ -77,3 +77,20 @@ header.masthead {
   margin-right:auto;
   float:right;
 }
+/*
+*
+* Checkout Styles
+*
+*/
+#showtimes_list {
+  list-style-type: none;
+}
+
+#showtimes_list li {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right:5px;
+  margin-bottom:5px;
+}

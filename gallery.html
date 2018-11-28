@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
         <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
         <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
       </div>
@@ -270,7 +270,7 @@
       button = ev.target;
       movie_id = button.getAttribute("data-movie-id");
       sessionStorage.setItem('movie_id', movie_id);
-      window.location = "/checkout.html";
+      window.location = "checkout.html";
     }
   </script>
 

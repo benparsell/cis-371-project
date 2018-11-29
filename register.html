@@ -172,9 +172,14 @@
                 if(email.indexOf('@') > -1 && email.indexOf('.') > -1){
                     var custTemp = Math.floor(Math.random()*9000000) + 1000000;;
                     var newCustomer = {'custID':custTemp,'firstName':fname,'lastName':lname,'address':address,'email':email,'password':password};
+
+                    firebase.auth().createUserWithEmailAndPassword(email,password).catch(function(error){
+                        console.log(error.code);
+                    });
+                    //WRITE CALLBACK TO GET/MAKE CUSTID
                     ref.push().set(newCustomer);
                     window.alert("Thank You for Creating Your New Account! You Will Now Be Redirected to Your Account Page")
-                    location.href='account.html';
+                    location.href='account.html?custID='+custTemp;
                 }
                 else{
                     window.alert("Error: Email is not in a valid format");

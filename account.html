@@ -25,8 +25,20 @@
     <link href="css/styles.css" rel="stylesheet">
 
 </head>
+
 <body>
- 
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo" /> Downtown Theater</a>
+        </div>
+    </nav>
+    <section id="gallery-intro" class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <h1>Viewing Account For: </h1>
+            </div>
+        </div>
+    </section>
 </body>
 <!-- Footer -->
 <footer class="footer bg-light">
@@ -74,3 +86,31 @@
         </div>
     </div>
 </footer>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDKChk9CActHlMIajRjHl9LAgjL3DHxHgc",
+        authDomain: "cis-371-project.firebaseapp.com",
+        databaseURL: "https://cis-371-project.firebaseio.com",
+        projectId: "cis-371-project",
+        storageBucket: "cis-371-project.appspot.com",
+        messagingSenderId: "580346306494"
+    };
+    firebase.initializeApp(config);
+    var ref = firebase.database().ref("customers")
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    function getCustomerAccount(custID) {
+        var 
+    }
+</script>
+
+</html>

@@ -91,18 +91,19 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4" id="movie-details-1">
-
+            <h2 class="movie-heading" id="showtime-heading"></h2>
           </div>
           <div class="col-md-4" id="movie-details-2">
 
           </div>
           <div class="col-md-4" id="movie-details-3">
-            <p>Book your tickets for:</p>
+            <p>Select a showtime:</p>
             <div class="showtimes">
               <ul id="showtimes_list">
 
               </ul>
             </div>
+
           </div>
         </div>
       </div>
@@ -286,13 +287,16 @@
 
         movie_col_1.appendChild(img);
 
+        var movie_col_2 = document.getElementById("movie-details-2");
+        var desc = document.createElement("p");
+        desc.innerHTML = movie.overview;
+
+        movie_col_2.appendChild(desc);
+
         var movie_col_3 = document.getElementById("movie-details-3");
 
-        var movie_title_head = document.createElement("h2");
-        movie_title_head.setAttribute("class", "movie-heading");
+        var movie_title_head = document.getElementById("showtime-heading");
         movie_title_head.innerHTML = movie.title;
-
-        movie_col_3.appendChild(movie_title_head);
 
 
       } else if (sessionStorage.getItem("movie_id") == null) {
@@ -308,15 +312,32 @@
         var movie_id = sessionStorage.getItem('movie_id');
         if(movie_id == showtime.movieID) {
           var showtimes_list = document.getElementById("showtimes_list");
-          var showtimes_list_item = document.createElement('li');
-          var showtimes_
-          showtimes_list_item.innerHTML = showtime.showID;
+          var showtimes_a = document.createElement("a");
+          showtimes_a.setAttribute("href", "javascript:void(0)");
+          showtimes_a.setAttribute("class", "btn btn-showtime");
+          showtimes_a.setAttribute("data-showtime_id", showtime.showID);
+          showtimes_a.setAttribute("data-movie-id", movie_id);
+          showtimes_a.addEventListener("click", ben);
+          if(showtime.ticketsAvailable < 1) {
+            showtimes_a.setAttribute("class", "btn btn-showtime disabled");
+            showtimes_a.setAttribute("aria-disabled", "true");
+          }
 
-          showtimes_list.appendChild(showtimes_list_item);
-          console.log(showtime.showID);
+          var showtimes_list_item = document.createElement('li');
+          showtimes_list_item.innerHTML = showtime.time + ", " + showtime.date;
+
+          showtimes_a.appendChild(showtimes_list_item);
+          showtimes_list.appendChild(showtimes_a);
         }
       }
     });
+
+    function ben(ev){
+      var button = ev.target;
+      var showtime_id = button.getAttribute("data-showtime-id");
+      sessionStorage.setItem('showtime_id', showtime_id);
+      window.location = "checkout.html";
+    }
 
     console.log(sessionStorage.getItem("movie_id"));
   </script>

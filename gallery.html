@@ -28,31 +28,50 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
-        <a id="sign-in-button" class="btn btn-primary" href="#">Sign In</a>
-        <a id="sign-out-button" class="btn btn-primary" onclick="signOut()" href="#">Sign Out</a>
-      </div>
-      <div id="sign-in">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-8">
-                <div class="form-group">
-                  <label>Email</label>
-                  <input class="form-control" placeholder="joe@email.com" type="email" id="email" />
-                </div>
-                <div class="form-group">
-                  <label>Password</label>
-                  <input class="form-control" placeholder="****" type="password" id="password" />
-                </div>
-                <div class="form-group">
-                  <a href="javascript:void(0)" class="btn btn-primary" id="log-in" onclick="toggleSignIn()">Log in</a>
-                </div>
-              </div>
-              <div class="col-md-4">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid logo"  /> Downtown Theater</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto" id="nav-list">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Movies</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account <i class="fa fa-user-circle"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="account-dropdown">
 
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="sign-in">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" placeholder="joe@email.com" type="email" id="email" />
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input class="form-control" placeholder="****" type="password" id="password" />
+                  </div>
+                  <div class="form-group">
+                    <a href="javascript:void(0)" class="btn btn-primary" id="log-in" onclick="toggleSignIn()">Log in</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
               </div>
             </div>
           </div>
@@ -191,8 +210,54 @@
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log("CORRECT");
+        var nav_cont = document.getElementById("account-dropdown");
+        while (nav_cont.firstChild) {
+            nav_cont.removeChild(nav_cont.firstChild);
+        }
+
+        var li_item_1 = document.createElement("li");
+        var a_item_1 = document.createElement("a");
+        a_item_1.innerHTML = "Account Details";
+        a_item_1.setAttribute("class", "dropdown-item");
+        a_item_1.setAttribute("href", "#");
+
+        var li_item_2 = document.createElement("li");
+        var a_item_2 = document.createElement("a");
+        a_item_2.innerHTML = "Sign Out";
+        a_item_2.setAttribute("class", "dropdown-item");
+        a_item_2.setAttribute("href", "#");
+        a_item_2.addEventListener("click", toggleSignIn);
+
+        li_item_1.appendChild(a_item_1);
+        li_item_2.appendChild(a_item_2);
+
+        nav_cont.appendChild(li_item_1);
+        nav_cont.appendChild(li_item_2);
+
       } else {
         console.log("INCORRECT");
+        var nav_cont = document.getElementById("account-dropdown");
+        while (nav_cont.firstChild) {
+            nav_cont.removeChild(nav_cont.firstChild);
+        }
+
+        var li_item_1 = document.createElement("li");
+        var a_item_1 = document.createElement("a");
+        a_item_1.innerHTML = "Register";
+        a_item_1.setAttribute("class", "dropdown-item");
+        a_item_1.setAttribute("href", "account.html");
+
+        var li_item_2 = document.createElement("li");
+        var a_item_2 = document.createElement("a");
+        a_item_2.innerHTML = "Sign In";
+        a_item_2.setAttribute("class", "dropdown-item");
+        a_item_2.setAttribute("id", "sign-in-button");
+        a_item_2.setAttribute("href", "javascript:void(0)");
+
+        li_item_1.appendChild(a_item_1);
+        a_item_2.appendChild(li_item_2);
+        nav_cont.appendChild(li_item_1);
+        nav_cont.appendChild(a_item_2);
       }
     });
 
@@ -226,7 +291,7 @@
       button.setAttribute("class", "btn btn-primary");
       button.setAttribute("href", "javascript:void(0);");
       button.setAttribute("data-movie-id", movie.movie_id);
-      button.addEventListener("click", checkout);
+      button.addEventListener("click", details);
 
       var img = document.createElement("img");
       img.setAttribute('src', movie.img_link);
@@ -265,12 +330,12 @@
       }
     }
 
-    function checkout(ev) {
+    function details(ev) {
       var movie_id, button;
       button = ev.target;
       movie_id = button.getAttribute("data-movie-id");
       sessionStorage.setItem('movie_id', movie_id);
-      window.location = "/checkout.html";
+      window.location = "movie-details.html";
     }
   </script>
 

@@ -29,7 +29,7 @@
 <body>
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid logo" /> Downtown Theater</a>
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="img-fluid logo" /> Downtown Theater</a>
         </div>
     </nav>
     <section id="gallery-intro" class="jumbotron">
@@ -40,19 +40,62 @@
         </div>
     </section>
     <div id="newAccount">
-        <b id="fID">First Name: </b>
-        <input id="first" type="text"><br><br>
-        <b id="lID">Last Name: </b>
-        <input id="last" type="text"><br><br>
-        <b id="eID">Email: </b>
-        <input id="email" type="text"><br><br>
-        <b id=pID>Password: </b>
-        <input id="pass" type="password"><br><br>
-        <b id="rID">Retype Password: </b>
-        <input id="repass" type="password"><br><br>
-        <b id="aID">Address: </b>
-        <input id="address" type="text"><br><br>
-        <input type="button" value="Create Account" onclick="createAccount()">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="fID">First Name</label>
+              <input class="form-control" id="first_name" name="first_name" type="text" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="lID">Last Name</label>
+              <input class="form-control" id="last_name" name="last_name" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label id="eID">Email</label>
+              <input class="form-control" type="text" id="email" name="email" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="pID">Password</label>
+              <input class="form-control" type="password" id="pass" name="password" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="rID">Password</label>
+              <input class="form-control" type="password" id="repass" name="repass" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="aID">Address</label>
+              <input class="form-control" type="text" id="address" name="address" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-4">
+              <br />
+              <input class="btn btn-primary" type="button" value="Create Account" onclick="createAccount()">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </body>
 <!-- Footer -->
@@ -118,14 +161,14 @@
     var ref = firebase.database().ref("customers")
 
     async function createAccount() {
-        var fname = document.getElementById("first").value;
-        var lname = document.getElementById("last").value;
+        var fname = document.getElementById("first_name").value;
+        var lname = document.getElementById("last_name").value;
         var email = document.getElementById("email").value;
         var password = document.getElementById("pass").value;
         var retyped = document.getElementById("repass").value;
         var address = document.getElementById("address").value;
         var length = 0;
-    
+
         if(fname==="" || lname==="" || email==="" || password==="" || retyped==="" || address===""){
             window.alert("Error: One or more fields are missing.")
             if(fname===""){
@@ -170,22 +213,9 @@
             lname = lname.charAt(0).toUpperCase() + lname.substr(1).toLowerCase();
             if(password == retyped){
                 if(email.indexOf('@') > -1 && email.indexOf('.') > -1){
-                    var custTemp = 0;
-                    var snapTemp = ref.on("value", snapshot=>{
-                        var dataTemp = snapshot.val();
-                        length = snapshot.numChildren();
-                        if(length.length=1){
-                            custTemp = "00000" + length;
-                        }
-                        else if(length.length=2){
-                            custTemp = "0000" + length;
-                        }
-                        console.log("@@@")
-                    });//FIGURE OUT CUSTOMER TEMP
-                    var newCustomer = {'custID':custTemp,'firstName':fname,'lastName':lname,'address':address,'email':email,'password':password};
-                    await ref.push().set(newCustomer);
-                    window.alert("Thank You for Creating Your New Account! You Will Now Be Redirected to Our Homepage.")
-                    location.href='index.html';
+                    this.handleSignUp();
+                    //window.alert("Thank You for Creating Your New Account! You Will Now Be Redirected to Our Homepage.")
+                    //location.href='index.html';
                 }
                 else{
                     window.alert("Error: Email is not in a valid format");
@@ -205,6 +235,58 @@
             //check name format, email, passwords are the same, addresss
             //if all match, push new customer; assign customer id
         }
+    }
+
+    /**
+     * Handles the sign up button press.
+     */
+    function handleSignUp() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('pass').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START createwithemail]
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      }).then(function () {
+        this.signUpCallback(firebase.auth().currentUser.uid);
+      });
+
+      // [END createwithemail]
+    }
+
+    function signUpCallback(uID, email) {
+      var address = document.getElementById("address").value;
+      var email = document.getElementById("email").value;
+      var first_name = document.getElementById("first_name").value;
+      var last_name = document.getElementById("last_name").value;
+
+      firebase.database().ref('customers/' + uID).set({
+        address: address,
+        custID: uID,
+        email: email,
+        firstName: first_name,
+        lastName: last_name
+      }).then(function () {
+        window.location = "index.html";
+      });
     }
 </script>
 

@@ -42,13 +42,13 @@
     <div id="newAccount">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="form-group">
               <label id="fID">First Name</label>
               <input class="form-control" id="first_name" name="first_name" type="text" />
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="form-group">
               <label id="lID">Last Name</label>
               <input class="form-control" id="last_name" name="last_name" type="text" />
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="form-group">
               <label id="eID">Email</label>
               <input class="form-control" type="text" id="email" name="email" />
@@ -64,23 +64,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="form-group">
               <label id="pID">Password</label>
               <input class="form-control" type="password" id="pass" name="password" />
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="form-group">
-              <label id="rID">Password</label>
+              <label id="rID">Retype Password</label>
               <input class="form-control" type="password" id="repass" name="repass" />
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div class="form-group">
               <label id="aID">Address</label>
               <input class="form-control" type="text" id="address" name="address" />
@@ -89,8 +87,8 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <div class="col-md-4">
-              <br />
+            <div class="col-md-12">
+              <br/>
               <input class="btn btn-primary" type="button" value="Create Account" onclick="createAccount()">
             </div>
           </div>
@@ -214,8 +212,6 @@
             if(password == retyped){
                 if(email.indexOf('@') > -1 && email.indexOf('.') > -1){
                     this.handleSignUp();
-                    //window.alert("Thank You for Creating Your New Account! You Will Now Be Redirected to Our Homepage.")
-                    //location.href='index.html';
                 }
                 else{
                     window.alert("Error: Email is not in a valid format");
@@ -232,11 +228,8 @@
                 document.getElementById("lID").style.color = "black";
                 document.getElementById("aID").style.color = "black";
             }
-            //check name format, email, passwords are the same, addresss
-            //if all match, push new customer; assign customer id
         }
     }
-
     /**
      * Handles the sign up button press.
      */
@@ -285,7 +278,7 @@
         firstName: first_name,
         lastName: last_name
       }).then(function () {
-        window.location = "index.html";
+        window.location = "account.html?uID=" + uID;
       });
     }
 </script>

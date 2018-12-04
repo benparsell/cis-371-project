@@ -35,10 +35,34 @@
     <section id="gallery-intro" class="jumbotron">
         <div class="container">
             <div class="row">
-                <h1>Viewing Account For: </h1>
+                <h1 id="accountHeading">Viewing Account For: </h1>
             </div>
         </div>
     </section>
+    <div id="customerInfo">
+        <table>
+            <tbody>
+                <tr>
+                    <th class="stable">Name: </th>
+                    <td id="nameRow"></td>
+                </tr>
+                <tr>
+                    <th class="stable">Email: </th>
+                    <td id="emailRow"></td>
+                </tr>
+                <tr>
+                    <th class="stable">Account Number: </th>
+                    <td id="accountRow"></td>
+                </tr>
+                <tr>
+                    <th class="stable">Address: </th>
+                    <td id="addressRow"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <input class="btn btn-primary" type="button" onclick="homepage()" value="Homepage">
+    </div>
 </body>
 <!-- Footer -->
 <footer class="footer bg-light">
@@ -100,16 +124,36 @@
     };
     firebase.initializeApp(config);
     var ref = firebase.database().ref("customers")
+    getUrlVars();
 
     function getUrlVars() {
-        var vars = {};
         var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            vars[key] = value;
+            var tempID = value;
+            console.log(tempID);
+            ref.on("value", snapshot =>{
+                snapshot.forEach(function(childSnapshot){
+                    var keyTemp = childSnapshot.key;
+                    console.log(keyTemp);
+                    if(keyTemp == tempID){
+                        var customer = snapshot.child(keyTemp).val();
+                        var heading = document.getElementById("accountHeading");
+                        var name = document.getElementById("nameRow");
+                        var email = document.getElementById("emailRow");
+                        var add = document.getElementById("addressRow");
+                        var account = document.getElementById("accountRow");
+
+                        heading.innerHTML = "Viewing Account For: " + customer.firstName + " " + customer.lastName;
+                        name.innerHTML = customer.firstName + " " + customer.lastName;
+                        email.innerHTML = customer.email;
+                        add.innerHTML = customer.address;
+                        account.innerHTML = tempID;
+                    }
+                })
+            })
         });
-        return vars;
     }
-    function getCustomerAccount(custID) {
-        var 
+    function homepage() {
+        window.location = "index.html";
     }
 </script>
 

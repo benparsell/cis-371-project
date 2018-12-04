@@ -91,7 +91,7 @@
               <a class="nav-link" href="gallery.html">Movies</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="account.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account <i class="fa fa-user-circle"></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="account-dropdown">
@@ -172,6 +172,7 @@
     </section>
 
     <!-- Testimonials -->
+    <!--
     <section class="testimonials text-center bg-light">
       <div class="container">
         <h2 class="mb-5">What people are saying...</h2>
@@ -199,10 +200,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section-->
 
     <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
+    <!--section class="call-to-action text-white text-center">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -223,7 +224,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section-->
 
     <!-- Footer -->
     <footer class="footer bg-light">
@@ -337,12 +338,13 @@
         while (nav_cont.firstChild) {
             nav_cont.removeChild(nav_cont.firstChild);
         }
-
+        console.log(user.uid);
+        var tempAddress = "account.html?uID="+ user.uid;
         var li_item_1 = document.createElement("li");
         var a_item_1 = document.createElement("a");
         a_item_1.innerHTML = "Account Details";
         a_item_1.setAttribute("class", "dropdown-item");
-        a_item_1.setAttribute("href", "#");
+        a_item_1.setAttribute("href", tempAddress);
 
         var li_item_2 = document.createElement("li");
         var a_item_2 = document.createElement("a");

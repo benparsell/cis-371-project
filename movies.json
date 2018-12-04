@@ -1,0 +1,2176 @@
+[
+    {
+        "movie_id": 19995,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Avatar",
+        "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+        "production_companies": [
+            {
+                "name": "Ingenious Film Partners",
+                "id": 289
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation",
+                "id": 306
+            },
+            {
+                "name": "Dune Entertainment",
+                "id": 444
+            },
+            {
+                "name": "Lightstorm Entertainment",
+                "id": 574
+            }
+        ],
+        "release_date": "12/10/2009",
+        "runtime": 162,
+        "status": "Released",
+        "tagline": "Enter the World of Pandora.",
+        "title": "Avatar"
+    },
+    {
+        "movie_id": 285,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "original_title": "Pirates of the Caribbean: At World's End",
+        "overview": "Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Jerry Bruckheimer Films",
+                "id": 130
+            },
+            {
+                "name": "Second Mate Productions",
+                "id": 19936
+            }
+        ],
+        "release_date": "5/19/2007",
+        "runtime": 169,
+        "status": "Released",
+        "tagline": "At the end of the world, the adventure begins.",
+        "title": "Pirates of the Caribbean: At World's End"
+    },
+    {
+        "movie_id": 206647,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            }
+        ],
+        "original_title": "Spectre",
+        "overview": "A cryptic message from Bond�??s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "Danjaq",
+                "id": 10761
+            },
+            {
+                "name": "B24",
+                "id": 69434
+            }
+        ],
+        "release_date": "10/26/2015",
+        "runtime": 148,
+        "status": "Released",
+        "tagline": "A Plan No One Escapes",
+        "title": "Spectre"
+    },
+    {
+        "movie_id": 49026,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "The Dark Knight Rises",
+        "overview": "Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.",
+        "production_companies": [
+            {
+                "name": "Legendary Pictures",
+                "id": 923
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "DC Entertainment",
+                "id": 9993
+            },
+            {
+                "name": "Syncopy",
+                "id": 9996
+            }
+        ],
+        "release_date": "7/16/2012",
+        "runtime": 165,
+        "status": "Released",
+        "tagline": "The Legend Ends",
+        "title": "The Dark Knight Rises"
+    },
+    {
+        "movie_id": 49529,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "John Carter",
+        "overview": "John Carter is a war-weary, former military captain who's inexplicably transported to the mysterious and exotic planet of Barsoom (Mars) and reluctantly becomes embroiled in an epic conflict. It's a world on the brink of collapse, and Carter rediscovers his humanity when he realizes the survival of Barsoom and its people rests in his hands.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            }
+        ],
+        "release_date": "3/7/2012",
+        "runtime": 132,
+        "status": "Released",
+        "tagline": "Lost in our world, found in another.",
+        "title": "John Carter"
+    },
+    {
+        "movie_id": 559,
+        "genres": [
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Spider-Man 3",
+        "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villain �?? including the shape-shifting Sandman. While Spider-Man�??s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "Laura Ziskin Productions",
+                "id": 326
+            },
+            {
+                "name": "Marvel Enterprises",
+                "id": 19551
+            }
+        ],
+        "release_date": "5/1/2007",
+        "runtime": 139,
+        "status": "Released",
+        "tagline": "The battle within.",
+        "title": "Spider-Man 3"
+    },
+    {
+        "movie_id": 38757,
+        "genres": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            }
+        ],
+        "original_title": "Tangled",
+        "overview": "When the kingdom's most wanted-and most charming-bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair. Flynn's curious captor, who's looking for her ticket out of the tower where she's been locked away for years, strikes a deal with the handsome thief and the unlikely duo sets off on an action-packed escapade, complete with a super-cop horse, an over-protective chameleon and a gruff gang of pub thugs.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Walt Disney Animation Studios",
+                "id": 6125
+            }
+        ],
+        "release_date": "11/24/2010",
+        "runtime": 100,
+        "status": "Released",
+        "tagline": "They're taking adventure to new lengths.",
+        "title": "Tangled"
+    },
+    {
+        "movie_id": 99861,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Avengers: Age of Ultron",
+        "overview": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth�??s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+        "production_companies": [
+            {
+                "name": "Marvel Studios",
+                "id": 420
+            },
+            {
+                "name": "Prime Focus",
+                "id": 15357
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            }
+        ],
+        "release_date": "4/22/2015",
+        "runtime": 141,
+        "status": "Released",
+        "tagline": "A New Age Has Come.",
+        "title": "Avengers: Age of Ultron"
+    },
+    {
+        "movie_id": 767,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            }
+        ],
+        "original_title": "Harry Potter and the Half-Blood Prince",
+        "overview": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
+        "production_companies": [
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "Heyday Films",
+                "id": 7364
+            }
+        ],
+        "release_date": "7/7/2009",
+        "runtime": 153,
+        "status": "Released",
+        "tagline": "Dark Secrets Revealed",
+        "title": "Harry Potter and the Half-Blood Prince"
+    },
+    {
+        "movie_id": 209112,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "Batman v Superman: Dawn of Justice",
+        "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City�??s own formidable, forceful vigilante takes on Metropolis�??s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it�??s ever known before.",
+        "production_companies": [
+            {
+                "name": "DC Comics",
+                "id": 429
+            },
+            {
+                "name": "Atlas Entertainment",
+                "id": 507
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "DC Entertainment",
+                "id": 9993
+            },
+            {
+                "name": "Cruel & Unusual Films",
+                "id": 9995
+            },
+            {
+                "name": "RatPac-Dune Entertainment",
+                "id": 41624
+            }
+        ],
+        "release_date": "3/23/2016",
+        "runtime": 151,
+        "status": "Released",
+        "tagline": "Justice or revenge",
+        "title": "Batman v Superman: Dawn of Justice"
+    },
+    {
+        "movie_id": 10764,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            }
+        ],
+        "original_title": "Quantum of Solace",
+        "overview": "Quantum of Solace continues the adventures of James Bond after Casino Royale. Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.",
+        "production_companies": [
+            {
+                "name": "Eon Productions",
+                "id": 7576
+            }
+        ],
+        "release_date": "10/30/2008",
+        "runtime": 106,
+        "status": "Released",
+        "tagline": "For love, for hate, for justice, for revenge.",
+        "title": "Quantum of Solace"
+    },
+    {
+        "movie_id": 58,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "original_title": "Pirates of the Caribbean: Dead Man's Chest",
+        "overview": "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones, he also attempts to avoid eternal damnation.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Jerry Bruckheimer Films",
+                "id": 130
+            },
+            {
+                "name": "Second Mate Productions",
+                "id": 19936
+            }
+        ],
+        "release_date": "6/20/2006",
+        "runtime": 151,
+        "status": "Released",
+        "tagline": "Jack is back!",
+        "title": "Pirates of the Caribbean: Dead Man's Chest"
+    },
+    {
+        "movie_id": 57201,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 37,
+                "name": "Western"
+            }
+        ],
+        "original_title": "The Lone Ranger",
+        "overview": "The Texas Rangers chase down a gang of outlaws led by Butch Cavendish, but the gang ambushes the Rangers, seemingly killing them all. One survivor is found, however, by an American Indian named Tonto, who nurses him back to health. The Ranger, donning a mask and riding a white stallion named Silver, teams up with Tonto to bring the unscrupulous gang and others of that ilk to justice.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Jerry Bruckheimer Films",
+                "id": 130
+            },
+            {
+                "name": "Infinitum Nihil",
+                "id": 2691
+            },
+            {
+                "name": "Silver Bullet Productions (II)",
+                "id": 37380
+            },
+            {
+                "name": "Blind Wink Productions",
+                "id": 37381
+            },
+            {
+                "name": "Classic Media",
+                "id": 37382
+            }
+        ],
+        "release_date": "7/3/2013",
+        "runtime": 149,
+        "status": "Released",
+        "tagline": "Never Take Off the Mask",
+        "title": "The Lone Ranger"
+    },
+    {
+        "movie_id": 49521,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Man of Steel",
+        "overview": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+        "production_companies": [
+            {
+                "name": "Legendary Pictures",
+                "id": 923
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "DC Entertainment",
+                "id": 9993
+            },
+            {
+                "name": "Syncopy",
+                "id": 9996
+            },
+            {
+                "name": "Cruel and Unusual Films",
+                "id": 78685
+            }
+        ],
+        "release_date": "6/12/2013",
+        "runtime": 143,
+        "status": "Released",
+        "tagline": "You will believe that a man can fly.",
+        "title": "Man of Steel"
+    },
+    {
+        "movie_id": 2454,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Chronicles of Narnia: Prince Caspian",
+        "overview": "One year after their incredible adventures in the Lion, the Witch and the Wardrobe, Peter, Edmund, Lucy and Susan Pevensie return to Narnia to aid a young prince whose life has been threatened by the evil King Miraz. Now, with the help of a colorful cast of new characters, including Trufflehunter the badger and Nikabrik the dwarf, the Pevensie clan embarks on an incredible quest to ensure that Narnia is returned to its rightful heir.",
+        "production_companies": [
+            {
+                "name": "Walt Disney",
+                "id": 5888
+            },
+            {
+                "name": "Walden Media",
+                "id": 10221
+            },
+            {
+                "name": "Stillking Films",
+                "id": 11345
+            },
+            {
+                "name": "Ozumi Films",
+                "id": 11440
+            },
+            {
+                "name": "Propeler",
+                "id": 11441
+            },
+            {
+                "name": "Silverbell Films",
+                "id": 11442
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            }
+        ],
+        "release_date": "5/15/2008",
+        "runtime": 150,
+        "status": "Released",
+        "tagline": "Hope has a new face.",
+        "title": "The Chronicles of Narnia: Prince Caspian"
+    },
+    {
+        "movie_id": 24428,
+        "genres": [
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "The Avengers",
+        "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "Marvel Studios",
+                "id": 420
+            }
+        ],
+        "release_date": "4/25/2012",
+        "runtime": 143,
+        "status": "Released",
+        "tagline": "Some assembly required.",
+        "title": "The Avengers"
+    },
+    {
+        "movie_id": 1865,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "Pirates of the Caribbean: On Stranger Tides",
+        "overview": "Captain Jack Sparrow crosses paths with a woman from his past, and he's not sure if it's love -- or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth. When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard, Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Jerry Bruckheimer Films",
+                "id": 130
+            },
+            {
+                "name": "Moving Picture Company (MPC)",
+                "id": 20478
+            }
+        ],
+        "release_date": "5/14/2011",
+        "runtime": 136,
+        "status": "Released",
+        "tagline": "Live Forever Or Die Trying.",
+        "title": "Pirates of the Caribbean: On Stranger Tides"
+    },
+    {
+        "movie_id": 41154,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Men in Black 3",
+        "overview": "Agents J (Will Smith) and K (Tommy Lee Jones) are back...in time. J has seen some inexplicable things in his 15 years with the Men in Black, but nothing, not even aliens, perplexes him as much as his wry, reticent partner. But when K's life and the fate of the planet are put at stake, Agent J will have to travel back in time to put things right. J discovers that there are secrets to the universe that K never told him - secrets that will reveal themselves as he teams up with the young Agent K (Josh Brolin) to save his partner, the agency, and the future of humankind.",
+        "production_companies": [
+            {
+                "name": "Amblin Entertainment",
+                "id": 56
+            },
+            {
+                "name": "Media Magik Entertainment",
+                "id": 5627
+            },
+            {
+                "name": "Imagenation Abu Dhabi FZ",
+                "id": 6736
+            },
+            {
+                "name": "Hemisphere Media Capital",
+                "id": 9169
+            },
+            {
+                "name": "Parkes/MacDonald Productions",
+                "id": 11084
+            }
+        ],
+        "release_date": "5/23/2012",
+        "runtime": 106,
+        "status": "Released",
+        "tagline": "They are back... in time.",
+        "title": "Men in Black 3"
+    },
+    {
+        "movie_id": 122917,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Hobbit: The Battle of the Five Armies",
+        "overview": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands.",
+        "production_companies": [
+            {
+                "name": "WingNut Films",
+                "id": 11
+            },
+            {
+                "name": "New Line Cinema",
+                "id": 12
+            },
+            {
+                "name": "Warner Bros. Pictures",
+                "id": 174
+            },
+            {
+                "name": "3Foot7",
+                "id": 7413
+            },
+            {
+                "name": "Metro-Goldwyn-Mayer (MGM)",
+                "id": 8411
+            }
+        ],
+        "release_date": "12/10/2014",
+        "runtime": 144,
+        "status": "Released",
+        "tagline": "Witness the defining chapter of the Middle-Earth saga",
+        "title": "The Hobbit: The Battle of the Five Armies"
+    },
+    {
+        "movie_id": 1930,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Amazing Spider-Man",
+        "overview": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance �?? leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "Laura Ziskin Productions",
+                "id": 326
+            },
+            {
+                "name": "Marvel Entertainment",
+                "id": 7505
+            }
+        ],
+        "release_date": "6/27/2012",
+        "runtime": 136,
+        "status": "Released",
+        "tagline": "The untold story begins.",
+        "title": "The Amazing Spider-Man"
+    },
+    {
+        "movie_id": 20662,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Robin Hood",
+        "overview": "When soldier Robin happens upon the dying Robert of Loxley, he promises to return the man's sword to his family in Nottingham. There, he assumes Robert's identity; romances his widow, Marion; and draws the ire of the town's sheriff and King John's henchman, Godfrey.",
+        "production_companies": [
+            {
+                "name": "Imagine Entertainment",
+                "id": 23
+            },
+            {
+                "name": "Universal Pictures",
+                "id": 33
+            },
+            {
+                "name": "Scott Free Productions",
+                "id": 1645
+            },
+            {
+                "name": "Relativity Media",
+                "id": 7295
+            }
+        ],
+        "release_date": "5/12/2010",
+        "runtime": 140,
+        "status": "Released",
+        "tagline": "Rise and rise again, until lambs become lions.",
+        "title": "Robin Hood"
+    },
+    {
+        "movie_id": 57158,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Hobbit: The Desolation of Smaug",
+        "overview": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
+        "production_companies": [
+            {
+                "name": "WingNut Films",
+                "id": 11
+            },
+            {
+                "name": "New Line Cinema",
+                "id": 12
+            },
+            {
+                "name": "Warner Bros. Pictures",
+                "id": 174
+            },
+            {
+                "name": "Metro-Goldwyn-Mayer (MGM)",
+                "id": 8411
+            }
+        ],
+        "release_date": "12/11/2013",
+        "runtime": 161,
+        "status": "Released",
+        "tagline": "Beyond darkness... beyond desolation... lies the greatest danger of all.",
+        "title": "The Hobbit: The Desolation of Smaug"
+    },
+    {
+        "movie_id": 2268,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Golden Compass",
+        "overview": "After overhearing a shocking secret, precocious orphan Lyra Belacqua trades her carefree existence roaming the halls of Jordan College for an otherworldly adventure in the far North, unaware that it's part of her destiny.",
+        "production_companies": [
+            {
+                "name": "New Line Cinema",
+                "id": 12
+            },
+            {
+                "name": "Ingenious Film Partners",
+                "id": 289
+            },
+            {
+                "name": "Depth of Field",
+                "id": 1473
+            },
+            {
+                "name": "Scholastic Productions",
+                "id": 1938
+            }
+        ],
+        "release_date": "12/4/2007",
+        "runtime": 113,
+        "status": "Released",
+        "tagline": "There are worlds beyond our own - the compass will show the way.",
+        "title": "The Golden Compass"
+    },
+    {
+        "movie_id": 254,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "original_title": "King Kong",
+        "overview": "In 1933 New York, an overly ambitious movie producer coerces his cast and hired ship crew to travel to mysterious Skull Island, where they encounter Kong, a giant ape who is immediately smitten with the leading lady.",
+        "production_companies": [
+            {
+                "name": "WingNut Films",
+                "id": 11
+            },
+            {
+                "name": "Universal Pictures",
+                "id": 33
+            },
+            {
+                "name": "Big Primate Pictures",
+                "id": 68
+            },
+            {
+                "name": "MFPV Film",
+                "id": 69
+            }
+        ],
+        "release_date": "12/14/2005",
+        "runtime": 187,
+        "status": "Released",
+        "tagline": "The eighth wonder of the world.",
+        "title": "King Kong"
+    },
+    {
+        "movie_id": 597,
+        "genres": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "Titanic",
+        "overview": "84 years later, a 101-year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc??, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation",
+                "id": 306
+            },
+            {
+                "name": "Lightstorm Entertainment",
+                "id": 574
+            }
+        ],
+        "release_date": "11/18/1997",
+        "runtime": 194,
+        "status": "Released",
+        "tagline": "Nothing on Earth could come between them.",
+        "title": "Titanic"
+    },
+    {
+        "movie_id": 271110,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Captain America: Civil War",
+        "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+        "production_companies": [
+            {
+                "name": "Studio Babelsberg",
+                "id": 264
+            },
+            {
+                "name": "Marvel Studios",
+                "id": 420
+            },
+            {
+                "name": "Walt Disney Studios Motion Pictures",
+                "id": 3036
+            },
+            {
+                "name": "Vita-Ray Dutch Productions (III)",
+                "id": 84424
+            },
+            {
+                "name": "Deluxe Digital Studios",
+                "id": 84425
+            }
+        ],
+        "release_date": "4/27/2016",
+        "runtime": 147,
+        "status": "Released",
+        "tagline": "Divided We Fall",
+        "title": "Captain America: Civil War"
+    },
+    {
+        "movie_id": 44833,
+        "genres": [
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Battleship",
+        "overview": "When mankind beams a radio signal into space, a reply comes from �??Planet G�??, in the form of several alien crafts that splash down in the waters off Hawaii. Lieutenant Alex Hopper is a weapons officer assigned to the USS John Paul Jones, part of an international naval coalition which becomes the world's last hope for survival as they engage the hostile alien force of unimaginable strength. While taking on the invaders, Hopper must also try to live up to the potential his brother, and his fianc??e's father, Admiral Shane, expect of him.",
+        "production_companies": [
+            {
+                "name": "Universal Pictures",
+                "id": 33
+            },
+            {
+                "name": "Hasbro",
+                "id": 2598
+            },
+            {
+                "name": "Bluegrass Films",
+                "id": 13778
+            },
+            {
+                "name": "Film 44",
+                "id": 20153
+            }
+        ],
+        "release_date": "4/11/2012",
+        "runtime": 131,
+        "status": "Released",
+        "tagline": "The Battle for Earth Begins at Sea",
+        "title": "Battleship"
+    },
+    {
+        "movie_id": 135397,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "Jurassic World",
+        "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+        "production_companies": [
+            {
+                "name": "Universal Studios",
+                "id": 13
+            },
+            {
+                "name": "Amblin Entertainment",
+                "id": 56
+            },
+            {
+                "name": "Legendary Pictures",
+                "id": 923
+            },
+            {
+                "name": "Fuji Television Network",
+                "id": 3341
+            },
+            {
+                "name": "Dentsu",
+                "id": 6452
+            }
+        ],
+        "release_date": "6/9/2015",
+        "runtime": 124,
+        "status": "Released",
+        "tagline": "The park is open.",
+        "title": "Jurassic World"
+    },
+    {
+        "movie_id": 37724,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "Spider-Man 2",
+        "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "Laura Ziskin Productions",
+                "id": 326
+            },
+            {
+                "name": "Marvel Enterprises",
+                "id": 19551
+            }
+        ],
+        "release_date": "6/25/2004",
+        "runtime": 127,
+        "status": "Released",
+        "tagline": "There's a hero in all of us.",
+        "title": "Spider-Man 2"
+    },
+    {
+        "movie_id": 558,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Iron Man 3",
+        "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+        "production_companies": [
+            {
+                "name": "Marvel Studios",
+                "id": 420
+            }
+        ],
+        "release_date": "4/18/2013",
+        "runtime": 130,
+        "status": "Released",
+        "tagline": "Unleash the power behind the armor.",
+        "title": "Iron Man 3"
+    },
+    {
+        "movie_id": 68721,
+        "genres": [
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Alice in Wonderland",
+        "overview": "Alice, an unpretentious and individual 19-year-old, is betrothed to a dunce of an English nobleman. At her engagement party, she escapes the crowd to consider whether to go through with the marriage and falls down a hole in the garden after spotting an unusual rabbit. Arriving in a strange and surreal place called 'Underland,' she finds herself in a world that resembles the nightmares she had as a child, filled with talking animals, villainous queens and knights, and frumious bandersnatches. Alice realizes that she is there for a reason �?? to conquer the horrific Jabberwocky and restore the rightful queen to her throne.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Team Todd",
+                "id": 598
+            },
+            {
+                "name": "Tim Burton Productions",
+                "id": 8601
+            },
+            {
+                "name": "Roth Films",
+                "id": 16314
+            },
+            {
+                "name": "Zanuck Company, The",
+                "id": 20004
+            }
+        ],
+        "release_date": "3/3/2010",
+        "runtime": 108,
+        "status": "Released",
+        "tagline": "You're invited to a very important date.",
+        "title": "Alice in Wonderland"
+    },
+    {
+        "movie_id": 12155,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "X-Men: The Last Stand",
+        "overview": "When a cure is found to treat mutations, lines are drawn amongst the X-Men and The Brotherhood, a band of powerful mutants organized under Xavier's former ally, Magneto.",
+        "production_companies": [
+            {
+                "name": "Ingenious Film Partners",
+                "id": 289
+            },
+            {
+                "name": "Twentieth Century Fox Film Corporation",
+                "id": 306
+            },
+            {
+                "name": "Donners' Company",
+                "id": 431
+            },
+            {
+                "name": "Dune Entertainment",
+                "id": 444
+            },
+            {
+                "name": "Major Studio Partners",
+                "id": 445
+            },
+            {
+                "name": "Bad Hat Harry Productions",
+                "id": 9168
+            },
+            {
+                "name": "thinkfilm",
+                "id": 12247
+            },
+            {
+                "name": "Marvel Enterprises",
+                "id": 19551
+            },
+            {
+                "name": "X3 Canada Productions",
+                "id": 79028
+            },
+            {
+                "name": "X3US Productions",
+                "id": 79029
+            },
+            {
+                "name": "XM3 Service",
+                "id": 79030
+            }
+        ],
+        "release_date": "5/24/2006",
+        "runtime": 104,
+        "status": "Released",
+        "tagline": "Take a Stand",
+        "title": "X-Men: The Last Stand"
+    },
+    {
+        "movie_id": 36668,
+        "genres": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            }
+        ],
+        "original_title": "Monsters University",
+        "overview": "A look at the relationship between Mike and Sulley during their days at Monsters University �?? when they weren't necessarily the best of friends.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Pixar Animation Studios",
+                "id": 3
+            }
+        ],
+        "release_date": "6/20/2013",
+        "runtime": 104,
+        "status": "Released",
+        "tagline": "School never looked this scary.",
+        "title": "Monsters University"
+    },
+    {
+        "movie_id": 62211,
+        "genres": [
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Transformers: Revenge of the Fallen",
+        "overview": "Sam Witwicky leaves the Autobots behind for a normal life. But when his mind is filled with cryptic symbols, the Decepticons target him and he is dragged back into the Transformers' war.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "DreamWorks SKG",
+                "id": 27
+            },
+            {
+                "name": "Amblin Entertainment",
+                "id": 56
+            },
+            {
+                "name": "Di Bonaventura Pictures",
+                "id": 435
+            },
+            {
+                "name": "Platinum Dunes",
+                "id": 2481
+            },
+            {
+                "name": "Hasbro Studios",
+                "id": 22826
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            }
+        ],
+        "release_date": "6/19/2009",
+        "runtime": 150,
+        "status": "Released",
+        "tagline": "Revenge is coming.",
+        "title": "Transformers: Revenge of the Fallen"
+    },
+    {
+        "movie_id": 8373,
+        "genres": [
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Transformers: Age of Extinction",
+        "overview": "As humanity picks up the pieces, following the conclusion of \"Transformers: Dark of the Moon,\" Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "Amblin Entertainment",
+                "id": 56
+            },
+            {
+                "name": "Di Bonaventura Pictures",
+                "id": 435
+            },
+            {
+                "name": "Platinum Dunes",
+                "id": 2481
+            },
+            {
+                "name": "China Movie Channel",
+                "id": 11413
+            },
+            {
+                "name": "Hasbro Studios",
+                "id": 22826
+            },
+            {
+                "name": "Ian Bryce Productions",
+                "id": 38833
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            }
+        ],
+        "release_date": "6/25/2014",
+        "runtime": 165,
+        "status": "Released",
+        "tagline": "This is not war. It's extinction.",
+        "title": "Transformers: Age of Extinction"
+    },
+    {
+        "movie_id": 91314,
+        "genres": [
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            }
+        ],
+        "original_title": "Oz: The Great and Powerful",
+        "overview": "Oscar Diggs, a small-time circus illusionist and con-artist, is whisked from Kansas to the Land of Oz where the inhabitants assume he's the great wizard of prophecy, there to save Oz from the clutches of evil.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Roth Films",
+                "id": 16314
+            }
+        ],
+        "release_date": "3/7/2013",
+        "runtime": 130,
+        "status": "Released",
+        "tagline": "In Oz, nothing is what it seems",
+        "title": "Oz: The Great and Powerful"
+    },
+    {
+        "movie_id": 68728,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "The Amazing Spider-Man 2",
+        "overview": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen�??s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "Marvel Enterprises",
+                "id": 19551
+            },
+            {
+                "name": "Avi Arad Productions",
+                "id": 31828
+            },
+            {
+                "name": "Matt Tolmach Productions",
+                "id": 53462
+            }
+        ],
+        "release_date": "4/16/2014",
+        "runtime": 142,
+        "status": "Released",
+        "tagline": "No more secrets.",
+        "title": "The Amazing Spider-Man 2"
+    },
+    {
+        "movie_id": 102382,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "TRON: Legacy",
+        "overview": "Sam Flynn, the tech-savvy and daring son of Kevin Flynn, investigates his father's disappearance and is pulled into The Grid. With the help of a mysterious program named Quorra, Sam quests to stop evil dictator Clu from crossing into the real world.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "LivePlanet",
+                "id": 7161
+            },
+            {
+                "name": "Prana Studios",
+                "id": 18713
+            },
+            {
+                "name": "Sean Bailey Productions",
+                "id": 23791
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            },
+            {
+                "name": "Kontsept Film Company",
+                "id": 76067
+            }
+        ],
+        "release_date": "12/10/2010",
+        "runtime": 125,
+        "status": "Released",
+        "tagline": "The Game Has Changed.",
+        "title": "TRON: Legacy"
+    },
+    {
+        "movie_id": 20526,
+        "genres": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 35,
+                "name": "Comedy"
+            }
+        ],
+        "original_title": "Cars 2",
+        "overview": "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Pixar Animation Studios",
+                "id": 3
+            }
+        ],
+        "release_date": "6/11/2011",
+        "runtime": 106,
+        "status": "Released",
+        "tagline": "Ka-ciao!",
+        "title": "Cars 2"
+    },
+    {
+        "movie_id": 49013,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Green Lantern",
+        "overview": "For centuries, a small but powerful force of warriors called the Green Lantern Corps has sworn to keep intergalactic order. Each Green Lantern wears a ring that grants him superpowers. But when a new enemy called Parallax threatens to destroy the balance of power in the Universe, their fate and the fate of Earth lie in the hands of the first human ever recruited.",
+        "production_companies": [
+            {
+                "name": "De Line Pictures",
+                "id": 2609
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "DC Entertainment",
+                "id": 9993
+            }
+        ],
+        "release_date": "6/16/2011",
+        "runtime": 114,
+        "status": "Released",
+        "tagline": "In our darkest hour, there will be light.",
+        "title": "Green Lantern"
+    },
+    {
+        "movie_id": 44912,
+        "genres": [
+            {
+                "id": 16,
+                "name": "Animation"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 35,
+                "name": "Comedy"
+            }
+        ],
+        "original_title": "Toy Story 3",
+        "overview": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Pixar Animation Studios",
+                "id": 3
+            }
+        ],
+        "release_date": "6/16/2010",
+        "runtime": 103,
+        "status": "Released",
+        "tagline": "No toy gets left behind.",
+        "title": "Toy Story 3"
+    },
+    {
+        "movie_id": 10193,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "Terminator Salvation",
+        "overview": "All grown up in post-apocalyptic 2018, John Connor must lead the resistance of humans against the increasingly dominating militaristic robots. But when Marcus Wright appears, his existence confuses the mission as Connor tries to determine whether Wright has come from the future or the past -- and whether he's friend or foe.",
+        "production_companies": [
+            {
+                "name": "Columbia Pictures",
+                "id": 5
+            },
+            {
+                "name": "The Halcyon Company",
+                "id": 4021
+            },
+            {
+                "name": "Wonderland Sound and Vision",
+                "id": 4022
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            }
+        ],
+        "release_date": "5/20/2009",
+        "runtime": 115,
+        "status": "Released",
+        "tagline": "The End Begins.",
+        "title": "Terminator Salvation"
+    },
+    {
+        "movie_id": 168259,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 27,
+                "name": "Horror"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "original_title": "World War Z",
+        "overview": "Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "GK Films",
+                "id": 3281
+            },
+            {
+                "name": "Skydance Productions",
+                "id": 6277
+            },
+            {
+                "name": "Hemisphere Media Capital",
+                "id": 9169
+            },
+            {
+                "name": "Apparatus Productions",
+                "id": 11956
+            },
+            {
+                "name": "Latina Pictures",
+                "id": 19108
+            },
+            {
+                "name": "2DUX²",
+                "id": 23644
+            }
+        ],
+        "release_date": "6/20/2013",
+        "runtime": 116,
+        "status": "Released",
+        "tagline": "Remember Philly!",
+        "title": "World War Z"
+    },
+    {
+        "movie_id": 72190,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "X-Men: Days of Future Past",
+        "overview": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past �?? to save our future.",
+        "production_companies": [
+            {
+                "name": "Twentieth Century Fox Film Corporation",
+                "id": 306
+            },
+            {
+                "name": "Donners' Company",
+                "id": 431
+            },
+            {
+                "name": "Marvel Entertainment",
+                "id": 7505
+            },
+            {
+                "name": "Bad Hat Harry Productions",
+                "id": 9168
+            },
+            {
+                "name": "TSG Entertainment",
+                "id": 22213
+            },
+            {
+                "name": "Down Productions",
+                "id": 37336
+            },
+            {
+                "name": "Revolution Sun Studios",
+                "id": 76043
+            }
+        ],
+        "release_date": "5/15/2014",
+        "runtime": 131,
+        "status": "Released",
+        "tagline": "To save the future, they must alter the past",
+        "title": "X-Men: Days of Future Past"
+    },
+    {
+        "movie_id": 127585,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "original_title": "Star Trek Into Darkness",
+        "overview": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis.  With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "Skydance Productions",
+                "id": 6277
+            },
+            {
+                "name": "Bad Robot",
+                "id": 11461
+            },
+            {
+                "name": "Kurtzman/Orci",
+                "id": 12536
+            }
+        ],
+        "release_date": "5/5/2013",
+        "runtime": 132,
+        "status": "Released",
+        "tagline": "Earth Will Fall",
+        "title": "Star Trek Into Darkness"
+    },
+    {
+        "movie_id": 54138,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            }
+        ],
+        "original_title": "Jack the Giant Slayer",
+        "overview": "The story of an ancient war that is reignited when a young farmhand unwittingly opens a gateway between our world and a fearsome race of giants. Unleashed on the Earth for the first time in centuries, the giants strive to reclaim the land they once lost, forcing the young man, Jack into the battle of his life to stop them. Fighting for a kingdom, its people, and the love of a brave princess, he comes face to face with the unstoppable warriors he thought only existed in legend�??and gets the chance to become a legend himself.",
+        "production_companies": [
+            {
+                "name": "New Line Cinema",
+                "id": 12
+            },
+            {
+                "name": "Original Film",
+                "id": 333
+            },
+            {
+                "name": "Legendary Pictures",
+                "id": 923
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "Big Kid Pictures",
+                "id": 8406
+            },
+            {
+                "name": "Bad Hat Harry Productions",
+                "id": 9168
+            }
+        ],
+        "release_date": "2/27/2013",
+        "runtime": 114,
+        "status": "Released",
+        "tagline": "Prepare for a giant adventure",
+        "title": "Jack the Giant Slayer"
+    },
+    {
+        "movie_id": 81005,
+        "genres": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            }
+        ],
+        "original_title": "The Great Gatsby",
+        "overview": "An adaptation of F. Scott Fitzgerald's Long Island-set novel, where Midwesterner Nick Carraway is lured into the lavish world of his neighbor, Jay Gatsby. Soon enough, however, Carraway will see through the cracks of Gatsby's nouveau riche existence, where obsession, madness, and tragedy await.",
+        "production_companies": [
+            {
+                "name": "Village Roadshow Pictures",
+                "id": 79
+            },
+            {
+                "name": "Bazmark Films",
+                "id": 240
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "A&E Television Networks",
+                "id": 11858
+            },
+            {
+                "name": "Red Wagon Entertainment",
+                "id": 14440
+            },
+            {
+                "name": "Spectrum Films",
+                "id": 14604
+            }
+        ],
+        "release_date": "5/10/2013",
+        "runtime": 143,
+        "status": "Released",
+        "tagline": "Reserving judgments is a matter of infinite hope... I come to the admission that it has a limit.",
+        "title": "The Great Gatsby"
+    },
+    {
+        "movie_id": 64682,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 14,
+                "name": "Fantasy"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            }
+        ],
+        "original_title": "Prince of Persia: The Sands of Time",
+        "overview": "A rogue prince reluctantly joins forces with a mysterious princess and together, they race against dark forces to safeguard an ancient dagger capable of releasing the Sands of Time �?? gift from the gods that can reverse time and allow its possessor to rule the world.",
+        "production_companies": [
+            {
+                "name": "Walt Disney Pictures",
+                "id": 2
+            },
+            {
+                "name": "Jerry Bruckheimer Films",
+                "id": 130
+            }
+        ],
+        "release_date": "5/19/2010",
+        "runtime": 116,
+        "status": "Released",
+        "tagline": "Defy the Future",
+        "title": "Prince of Persia: The Sands of Time"
+    },
+    {
+        "movie_id": 9543,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Pacific Rim",
+        "overview": "When legions of monstrous creatures, known as Kaiju, started rising from the sea, a war began that would take millions of lives and consume humanity's resources for years on end. To combat the giant Kaiju, a special type of weapon was devised: massive robots, called Jaegers, which are controlled simultaneously by two pilots whose minds are locked in a neural bridge. But even the Jaegers are proving nearly defenseless in the face of the relentless Kaiju. On the verge of defeat, the forces defending mankind have no choice but to turn to two unlikely heroes�??a washed-up former pilot (Charlie Hunnam) and an untested trainee (Rinko Kikuchi)�??who are teamed to drive a legendary but seemingly obsolete Jaeger from the past. Together, they stand as mankind's last hope against the mounting apocalypse.",
+        "production_companies": [
+            {
+                "name": "Legendary Pictures",
+                "id": 923
+            },
+            {
+                "name": "Warner Bros.",
+                "id": 6194
+            },
+            {
+                "name": "Disney Double Dare You (DDY)",
+                "id": 19750
+            },
+            {
+                "name": "Indochina Productions",
+                "id": 19751
+            }
+        ],
+        "release_date": "7/11/2013",
+        "runtime": 131,
+        "status": "Released",
+        "tagline": "To Fight Monsters, We Created Monsters",
+        "title": "Pacific Rim"
+    },
+    {
+        "movie_id": 68726,
+        "genres": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            }
+        ],
+        "original_title": "Transformers: Dark of the Moon",
+        "overview": "Sam Witwicky takes his first tenuous steps into adulthood while remaining a reluctant human ally of Autobot-leader Optimus Prime. The film centers around the space race between the USSR and the USA, suggesting there was a hidden Transformers role in it all that remains one of the planet's most dangerous secrets.",
+        "production_companies": [
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            },
+            {
+                "name": "Di Bonaventura Pictures",
+                "id": 435
+            },
+            {
+                "name": "Indochina Productions",
+                "id": 19751
+            },
+            {
+                "name": "Hasbro Studios",
+                "id": 22826
+            }
+        ],
+        "release_date": "6/28/2011",
+        "runtime": 154,
+        "status": "Released",
+        "tagline": "The invasion we always feared. An enemy we never expected.",
+        "title": "Transformers: Dark of the Moon"
+    },
+    {
+        "movie_id": 38356,
+        "genres": [
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "original_title": "Indiana Jones and the Kingdom of the Crystal Skull",
+        "overview": "Set during the Cold War, the Soviets �?? led by sword-wielding Irina Spalko �?? are in search of a crystal skull which has supernatural powers related to a mystical Lost City of Gold. After being captured and then escaping from them, Indy is coerced to head to Peru at the behest of a young man whose friend �?? and Indy's colleague �?? Professor Oxley has been captured for his knowledge of the skull's whereabouts.",
+        "production_companies": [
+            {
+                "name": "Lucasfilm",
+                "id": 1
+            },
+            {
+                "name": "Paramount Pictures",
+                "id": 4
+            }
+        ],
+        "release_date": "5/21/2008",
+        "runtime": 122,
+        "status": "Released",
+        "tagline": "The adventure continues . . .",
+        "title": "Indiana Jones and the Kingdom of the Crystal Skull"
+    }
+]

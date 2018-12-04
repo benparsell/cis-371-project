@@ -1,0 +1,8 @@
+[
+    {"theatreID":"R101","screenDimensions":"40 x 85","maxCapacity":"180"},
+    {"theatreID":"R102","screenDimensions":"40 x 85","maxCapacity":"180"},
+    {"theatreID":"R103","screenDimensions":"40 x 85","maxCapacity":"180"},
+    {"theatreID":"R104","screenDimensions":"40 x 85","maxCapacity":"180"},
+    {"theatreID":"R105","screenDimensions":"40 x 85","maxCapacity":"200"},
+    {"theatreID":"R106+","screenDimensions":"45 x 105","maxCapacity":"210"}
+]

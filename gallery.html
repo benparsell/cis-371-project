@@ -215,11 +215,12 @@
             nav_cont.removeChild(nav_cont.firstChild);
         }
 
+        var tempAddress = "account.html?uID="+ user.uid;
         var li_item_1 = document.createElement("li");
         var a_item_1 = document.createElement("a");
         a_item_1.innerHTML = "Account Details";
         a_item_1.setAttribute("class", "dropdown-item");
-        a_item_1.setAttribute("href", "#");
+        a_item_1.setAttribute("href", tempAddress);
 
         var li_item_2 = document.createElement("li");
         var a_item_2 = document.createElement("a");

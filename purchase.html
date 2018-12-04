@@ -25,6 +25,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+    <link href="css/bootstrap-select-country.min.css" type="text/css" />
+
   </head>
 
   <body>
@@ -93,19 +96,120 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4" id="movie-details-1">
-            <h2 class="movie-heading" id="showtime-heading"></h2>
-          </div>
-          <div class="col-md-4" id="movie-details-2">
 
           </div>
-          <div class="col-md-4" id="movie-details-3">
-            <p>Select a showtime:</p>
-            <div class="showtimes">
-              <ul id="showtimes_list">
-
-              </ul>
+          <div class="col-md-5" id="movie-details-2">
+            <h3>Billing Info</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input class="form-control" name="first_name" type="text" id="first_name" placeholder="Jones"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input class="form-control" name="last_name" type="text" id="last_name" placeholder="Joe"/>
+                </div>
+              </div>
             </div>
-
+            <div class="row">
+              <div class="col-md-10">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control" name="email" type="email" id="user_email" placeholder="joe@gmail.com"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Address</label>
+                  <input class="form-control" name="address" id="address" type="text" placeholder="123 Main St."/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Address 2</label>
+                  <input class="form-control" name="address2" id="address2" type="text" placeholder="Apt. #3"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Country</label>
+                  <select class="selectpicker countrypicker" data-flag="true" data-live-search="true"></select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label>City</label>
+                  <input class="form-control" name="city" id="city" type="text" placeholder="Grand Rapids"/>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Postal Code</label>
+                  <input class="form-control" name="zipcode" id="zipcode" type="text" placeholder="49504"/>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>State</label>
+                  <input class="form-control" name="state" id="state" type="text" placeholder="MI"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <h3>Card Info</h3>
+            </div>
+            <div class="row">
+              <div class="col-md-10">
+                <div class="form-group">
+                  <label>Card Holder Name (Full Name)</label>
+                  <input class="form-control" type="text" id="card-holder" placeholder="Joe Jones"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label>Card No.</label>
+                  <input class="form-control" type="text" id="card-number" placeholder="1111 1111 1111 1111"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Card Exp.</label>
+                  <input class="form-control" type="text" id="card-exp" placeholder="02/2027"/>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Card CCV</label>
+                  <input class="form-control" type="text" id="card-ccv" placeholder="000"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <a href="javascript:void(0)" class="btn btn-primary" id="complete-order">Complete Order</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" id="movie-details-3">
+            <h3>Order Info</h3>
+            <p id="ticketsSelected"></p>
+            <p id="ticketPrice"></p>
+            <p id="tax"></p>
+            <hr />
+            <strong><p id="total"></p></strong>
           </div>
         </div>
       </div>
@@ -172,6 +276,7 @@
     };
     firebase.initializeApp(config);
 
+    var formerTicketCount = null;
 
     function signOut() {
       firebase.auth().signOut();
@@ -244,6 +349,17 @@
         nav_cont.appendChild(li_item_1);
         nav_cont.appendChild(li_item_2);
 
+        var customers = database.ref("/customers");
+        customers.on("child_added", function(snapshot, prevChildKey) {
+          var customer = snapshot.val();
+          if(snapshot.key == user.uid) {
+            sessionStorage.setItem("custID", customer.custID);
+            fillForm(user, customer);
+          }
+        });
+
+
+
       } else {
         console.log("INCORRECT");
         var nav_cont = document.getElementById("account-dropdown");
@@ -255,7 +371,7 @@
         var a_item_1 = document.createElement("a");
         a_item_1.innerHTML = "Register";
         a_item_1.setAttribute("class", "dropdown-item");
-        a_item_1.setAttribute("href", "register.html");
+        a_item_1.setAttribute("href", "account.html");
 
         var li_item_2 = document.createElement("li");
         var a_item_2 = document.createElement("a");
@@ -277,10 +393,9 @@
 
     movies_ref.on("child_added", function(snapshot, prevChildKey) {
       var movie = snapshot.val();
-      if(movie.movie_id == sessionStorage.getItem('movie_id')) {
-        console.log(movie.title);
+      if(movie.movie_id == sessionStorage.getItem("movie_id")) {
         var movie_header = document.getElementById("movie_head");
-        movie_header.innerHTML = "Tickets and Details on " + movie.title;
+        movie_header.innerHTML = "Purchase tickets for " + movie.title + " — Billing Info";
 
         var movie_col_1 = document.getElementById("movie-details-1");
         var img = document.createElement("img");
@@ -288,68 +403,110 @@
         img.setAttribute('class', 'img-fluid');
 
         movie_col_1.appendChild(img);
-
-        var movie_col_2 = document.getElementById("movie-details-2");
-        var desc = document.createElement("p");
-        desc.innerHTML = movie.overview;
-
-        movie_col_2.appendChild(desc);
-
-        var movie_col_3 = document.getElementById("movie-details-3");
-
-        var movie_title_head = document.getElementById("showtime-heading");
-        movie_title_head.innerHTML = movie.title;
-
-
-      } else if (sessionStorage.getItem("movie_id") == null) {
-        var movie_header = document.getElementById("movie_head");
-        movie_header.innerHTML = "You haven't selected a movie!";
       }
 
     });
+
+    var ticketsSelected = document.getElementById("ticketsSelected");
+    ticketsSelected.innerHTML = sessionStorage.getItem("ticketsSelected") + " tickets selected";
 
     showtimes_ref.on("child_added", function(snapshot, prevChildKey) {
       var showtime = snapshot.val();
-      if(sessionStorage.getItem('movie_id')) {
-        var movie_id = sessionStorage.getItem('movie_id');
-        if(movie_id == showtime.movieID) {
-          var showtimes_list = document.getElementById("showtimes_list");
-          var showtimes_a = document.createElement("a");
-          showtimes_a.setAttribute("href", "javascript:void(0)");
-          showtimes_a.setAttribute("class", "btn btn-showtime");
-          showtimes_a.setAttribute("data-showtime-id", showtime.showID);
-          showtimes_a.setAttribute("data-movie-id", movie_id);
-          showtimes_a.addEventListener("click", ben);
-          if(showtime.ticketsAvailable < 1) {
-            showtimes_a.setAttribute("class", "btn btn-showtime disabled");
-            showtimes_a.setAttribute("aria-disabled", "true");
-          }
+      if(showtime.showID == sessionStorage.getItem("showtime_id")) {
+        var ticketPrice = document.getElementById("ticketPrice");
+        ticketPrice.setAttribute("data-ticket-price", showtime.ticketPrice);
+        ticketPrice.innerHTML = "* " + showtime.ticketPrice + " per ticket";
 
-          var showtimes_list_item = document.createElement('li');
-          showtimes_list_item.innerHTML = showtime.time + ", " + showtime.date;
+        var subtotal = showtime.ticketPrice * sessionStorage.getItem("ticketsSelected");
 
-          showtimes_a.appendChild(showtimes_list_item);
-          showtimes_list.appendChild(showtimes_a);
-        }
+        var tax = document.getElementById("tax");
+        tax.setAttribute("data-tax", (subtotal * .06));
+        var tax_amount = Math.round((subtotal * .06) * 100) / 100;
+        tax.innerHTML = "Sales Tax (6%): $" + tax_amount;
+
+        var total = document.getElementById("total");
+        total.setAttribute("data-subtotal", subtotal);
+        total.setAttribute("data-total", subtotal + tax_amount);
+        total.innerHTML = "$" + (tax_amount + subtotal) + " Total Charge";
       }
+
     });
 
-    function ben(ev){
-      var showtime_id, button;
-      button = ev.target.parentElement;
-      showtime_id = button.getAttribute("data-showtime-id");
-      movie_id = button.getAttribute("data-movie-id");
-      sessionStorage.setItem('showtime_id', showtime_id);
-      sessionStorage.setItem('movie_id', movie_id);
-      window.location = "checkout.html"
+    var comp_button = document.getElementById("complete-order");
+    comp_button.addEventListener("click", completePurchase);
+
+    function completePurchase() {
+      // Create new ticket object(s) in firebase
+      var tick_num = sessionStorage.getItem("ticketsSelected");
+      var customer_id = sessionStorage.getItem("custID");
+      var ticket_ids = [];
+      for(var i = 0; i < tick_num; i++) {
+          ticket_ids.push(createTickets(customer_id));
+      }
+
+      var total = document.getElementById("total");
+      var tax = document.getElementById("tax");
+      var order_num = Math.floor(Math.random()*900000) + 100000;
+      var total_val = total.getAttribute("data-total");
+      // Create new order object in firebase, refernece ticket Keys
+      firebase.database().ref('orders/').push({
+        orderID: order_num,
+        subtotal: total.getAttribute("data-subtotal"),
+        ticketID: ticket_ids,
+        tax: tax.getAttribute("data-tax"),
+        total: total_val
+      });
+
+      sessionStorage.clear();
+      sessionStorage.setItem("order_num", order_num);
+      sessionStorage.setItem("tickets", ticket_ids);
+      sessionStorage.setItem("total", total_val);
+      window.location = "confirmation.html";
+
     }
 
-    console.log(sessionStorage.getItem("movie_id"));
-  </script>
+    function createTickets() {
+      var tick_id = "T1A-" + Math.floor(1000 + Math.random() * 9000);
+      firebase.database().ref('tickets/').push({
+        custID: sessionStorage.getItem("custID"),
+        showID: sessionStorage.getItem("showtime_id"),
+        ticketID: tick_id
+      });
+      return tick_id;
+    }
 
-    <!-- Bootstrap core JavaScript -->
+    function fillForm(user, customer) {
+      console.log(user);
+      console.log(customer);
+      var first_name = document.getElementById("first_name");
+      first_name.value = customer.firstName;
+      first_name.style.borderColor = "green";
+
+
+      var last_name = document.getElementById("last_name");
+      last_name.value = customer.lastName;
+      last_name.style.borderColor = "green";
+
+      var user_email = document.getElementById("user_email");
+      user_email.value = customer.email;
+      user_email.style.borderColor = "green";
+
+      var address = document.getElementById("address");
+      address.value = customer.address.substr(0, customer.address.indexOf(','));
+      address.style.borderColor = "green";
+    }
+
+
+
+
+
+    </script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-select-country.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="js/ui.js"></script>
 
   </body>

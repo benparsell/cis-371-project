@@ -87,7 +87,7 @@
     <section id="gallery-intro" class="jumbotron">
       <div class="container">
         <div class="row">
-            <h1 id="movie_head"></h1>
+            <h1 id="movie_head">Thank you for your Purchase!</h1>
         </div>
       </div>
     </section>
@@ -95,121 +95,12 @@
     <section id="">
       <div class="container">
         <div class="row">
-          <div class="col-md-4" id="movie-details-1">
-
-          </div>
-          <div class="col-md-5" id="movie-details-2">
-            <h3>Billing Info</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>First Name</label>
-                  <input class="form-control" name="first_name" type="text" id="first_name" placeholder="Jones"/>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Last Name</label>
-                  <input class="form-control" name="last_name" type="text" id="last_name" placeholder="Joe"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10">
-                <div class="form-group">
-                  <label>Email</label>
-                  <input class="form-control" name="email" type="email" id="user_email" placeholder="joe@gmail.com"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Address</label>
-                  <input class="form-control" name="address" id="address" type="text" placeholder="123 Main St."/>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Address 2</label>
-                  <input class="form-control" name="address2" id="address2" type="text" placeholder="Apt. #3"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Country</label>
-                  <select class="selectpicker countrypicker" data-flag="true" data-live-search="true"></select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label>City</label>
-                  <input class="form-control" name="city" id="city" type="text" placeholder="Grand Rapids"/>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label>Postal Code</label>
-                  <input class="form-control" name="zipcode" id="zipcode" type="text" placeholder="49504"/>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label>State</label>
-                  <input class="form-control" name="state" id="state" type="text" placeholder="MI"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <h3>Card Info</h3>
-            </div>
-            <div class="row">
-              <div class="col-md-10">
-                <div class="form-group">
-                  <label>Card Holder Name (Full Name)</label>
-                  <input class="form-control" type="text" id="card-holder" placeholder="Joe Jones"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8">
-                <div class="form-group">
-                  <label>Card No.</label>
-                  <input class="form-control" type="text" id="card-number" placeholder="1111 1111 1111 1111"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label>Card Exp.</label>
-                  <input class="form-control" type="text" id="card-exp" placeholder="02/2027"/>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <label>Card CCV</label>
-                  <input class="form-control" type="text" id="card-ccv" placeholder="000"/>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group">
-                <a href="javascript:void(0)" class="btn btn-primary" id="complete-order">Complete Order</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3" id="movie-details-3">
-            <h3>Order Info</h3>
-            <p id="ticketsSelected"></p>
-            <p id="ticketPrice"></p>
-            <p id="tax"></p>
-            <hr />
-            <strong><p id="total"></p></strong>
+          <div class="form-group">
+            <p id="order_num"></p>
+            <p id="movie_title"></p>
+            <p id="showtime"></p>
+            <p id="tickets"></p>
+            <p id="total"></p>
           </div>
         </div>
       </div>
@@ -349,16 +240,6 @@
         nav_cont.appendChild(li_item_1);
         nav_cont.appendChild(li_item_2);
 
-        var customers = database.ref("/customers");
-        customers.on("child_added", function(snapshot, prevChildKey) {
-          var customer = snapshot.val();
-          if(snapshot.key == user.uid) {
-            sessionStorage.setItem("custID", customer.custID);
-            fillForm(user, customer);
-          }
-        });
-
-
 
       } else {
         console.log("INCORRECT");
@@ -391,119 +272,19 @@
     var movies_ref = database.ref('movies');
     var showtimes_ref = database.ref('showtimes');
 
-    movies_ref.on("child_added", function(snapshot, prevChildKey) {
-      var movie = snapshot.val();
-      if(movie.movie_id == sessionStorage.getItem("movie_id")) {
-        var movie_header = document.getElementById("movie_head");
-        movie_header.innerHTML = "Purchase tickets for " + movie.title + " — Billing Info";
+    var total = document.getElementById("total");
+    total.innerHTML = "Order total: $" + sessionStorage.getItem("total");
 
-        var movie_col_1 = document.getElementById("movie-details-1");
-        var img = document.createElement("img");
-        img.setAttribute('src', movie.img_link);
-        img.setAttribute('class', 'img-fluid');
+    // Add Tickets
 
-        movie_col_1.appendChild(img);
-      }
+    // Add movie title
 
-    });
+    // Add showtime time / date
 
-    var ticketsSelected = document.getElementById("ticketsSelected");
-    ticketsSelected.innerHTML = sessionStorage.getItem("ticketsSelected") + " tickets selected";
+    // Add Movie title
 
-    showtimes_ref.on("child_added", function(snapshot, prevChildKey) {
-      var showtime = snapshot.val();
-      if(showtime.showID == sessionStorage.getItem("showtime_id")) {
-        var ticketPrice = document.getElementById("ticketPrice");
-        ticketPrice.setAttribute("data-ticket-price", showtime.ticketPrice);
-        ticketPrice.innerHTML = "* " + showtime.ticketPrice + " per ticket";
-
-        var subtotal = showtime.ticketPrice * sessionStorage.getItem("ticketsSelected");
-
-        var tax = document.getElementById("tax");
-        tax.setAttribute("data-tax", (subtotal * .06));
-        var tax_amount = Math.round((subtotal * .06) * 100) / 100;
-        tax.innerHTML = "Sales Tax (6%): $" + tax_amount;
-
-        var total = document.getElementById("total");
-        total.setAttribute("data-subtotal", subtotal);
-        total.setAttribute("data-total", subtotal + tax_amount);
-        total.innerHTML = "$" + (tax_amount + subtotal) + " Total Charge";
-      }
-
-    });
-
-    var comp_button = document.getElementById("complete-order");
-    comp_button.addEventListener("click", completePurchase);
-
-    function completePurchase() {
-      // Create new ticket object(s) in firebase
-      var tick_num = sessionStorage.getItem("ticketsSelected");
-      var customer_id = sessionStorage.getItem("custID");
-      var ticket_ids = [];
-      for(var i = 0; i < tick_num; i++) {
-          ticket_ids.push(createTickets(customer_id));
-      }
-
-      var total = document.getElementById("total");
-      var tax = document.getElementById("tax");
-      var order_num = Math.floor(Math.random()*900000) + 100000;
-      var total_val = total.getAttribute("data-total");
-      // Create new order object in firebase, refernece ticket Keys
-      firebase.database().ref('orders/').push({
-        orderID: order_num,
-        subtotal: total.getAttribute("data-subtotal"),
-        ticketID: ticket_ids,
-        tax: tax.getAttribute("data-tax"),
-        total: total_val
-      });
-
-      var movieID = sessionStorage.getItem("movie_id");
-      var showID = sessionStorage.getItem("showtime_id");
-
-      sessionStorage.clear();
-      sessionStorage.setItem("order_num", order_num);
-      sessionStorage.setItem("tickets", ticket_ids);
-      sessionStorage.setItem("total", total_val);
-      sessionStorage.setItem("movieID", movieID);
-      sessionStorage.setItem("showID", showID);
-      window.location = "confirmation.html";
-
-    }
-
-    function createTickets() {
-      var tick_id = "T1A-" + Math.floor(1000 + Math.random() * 9000);
-      firebase.database().ref('tickets/').push({
-        custID: sessionStorage.getItem("custID"),
-        showID: sessionStorage.getItem("showtime_id"),
-        ticketID: tick_id
-      });
-      return tick_id;
-    }
-
-    function fillForm(user, customer) {
-      console.log(user);
-      console.log(customer);
-      var first_name = document.getElementById("first_name");
-      first_name.value = customer.firstName;
-      first_name.style.borderColor = "green";
-
-
-      var last_name = document.getElementById("last_name");
-      last_name.value = customer.lastName;
-      last_name.style.borderColor = "green";
-
-      var user_email = document.getElementById("user_email");
-      user_email.value = customer.email;
-      user_email.style.borderColor = "green";
-
-      var address = document.getElementById("address");
-      address.value = customer.address.substr(0, customer.address.indexOf(','));
-      address.style.borderColor = "green";
-    }
-
-
-
-
+    var order_num = document.getElementById("order_num");
+    order_num.innerHTML = "Order number: #" + sessionStorage.getItem("order_num");
 
     </script>
 
